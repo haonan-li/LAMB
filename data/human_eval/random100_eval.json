@@ -1,0 +1,1966 @@
+[
+  {
+    "question": "HelloCan any one offer any advice on the restaurants at the hotel. What food is served and a idea of pricesAlso if you can recommend other places to eat near by I would be gratefulThank You",
+    "answer_entity_id": "27_R_12487",
+    "all_answer_entity_list": [
+      "27_R_12487"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "27_R_2675",
+      "27_R_12356",
+      "27_R_9924"
+    ],
+    "human_eval_top3_hit": ["27_R_2675"]
+  },
+  {
+    "question": "1st time to Chicago and we are coming for our 10th anniversary. We love architecture, water, dive bars. . . Pretty much everything! 1) What must see/do things are at the top of your list of things not to miss? 2) What area would you recommend that we stay in given our likes? (We have free rooms at Marriott hotel chain). 3) Anything else we should take into consideration?",
+    "answer_entity_id": "2_A_2545",
+    "all_answer_entity_list": [
+      "2_A_2541",
+      "2_A_2545"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "2_A_2042",
+      "2_A_2519",
+      "2_A_2513"
+    ],
+    "human_eval_top3_hit": ["2_A_2042"]
+  },
+  {
+    "question": "Hi all, Just another quick question, I have been informed we are staying at the IH, is this hotel okay for position to attractions and can I see most things on foot from this hotel. ? ? I cannot change hotels due to the conference. Is there any restaurants for lunch you can recommend which is located close by. Basically, hubby will be working and I'm the lucky girl who will be out exploring with the girls (from other countries). . . so if I could possibly have a little tip from you guys where to eat which is cheap and maybe fun like a good Italian or something yummy. . . . ! Thanks again, greatly appreciate your info. EM.",
+    "answer_entity_id": "2_R_10153",
+    "all_answer_entity_list": [
+      "2_R_10153",
+      "2_R_10196"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "2_R_10153",
+      "2_R_10211",
+      "2_R_2631"
+    ],
+    "human_eval_top3_hit": [
+      "2_R_10153"
+    ]
+  },
+  {
+    "question": "Am looking for suggestions for high tea - the old fashioned way on a tiered plate. Is the high tea at Raffles a buffet and do they also have a curry buffet for lunch. Is the curry bufftet worth going to?",
+    "answer_entity_id": "29_R_11050",
+    "all_answer_entity_list": [
+      "29_R_11050"
+    ],
+    "tagged_latlongs": [
+      [
+        1.2818900346755981,
+        103.84912109375
+      ]
+    ],
+    "prediction": [
+      "29_R_7386",
+      "29_R_11454",
+      "29_R_9402"
+    ],
+    "human_eval_top3_hit": ["29_R_9402"]
+  },
+  {
+    "question": "Has anyone out there stayed at the Four Points Sheraton on K street N. W. ? I chose it mostly because of the heated indoor pool. We are traveling with our 2 boys, ages 8 and 11, and they love to swim. Its located in downtown, but I am wondering if I should of chose somewhere else after reading all these other posts. We are staying for a week. Any suggestions out there? ? ?",
+    "answer_entity_id": "1_H_153598",
+    "all_answer_entity_list": [
+      "1_H_153598"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_H_180405",
+      "1_R_4618",
+      "1_A_2002"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi I'm coming with a couple of friends to London and we're stopping at the Jury's Inn in Chelsea, can anyone recommend some good pubs/bars nearby and also some good places to eat? cheers",
+    "answer_entity_id": "10_R_20687",
+    "all_answer_entity_list": [
+      "10_R_15003",
+      "10_R_17034",
+      "10_R_20687"
+    ],
+    "tagged_latlongs": [
+      [
+        51.49013900756836,
+        -0.16247999668121338
+      ]
+    ],
+    "prediction": [
+      "10_R_10899",
+      "10_R_12190",
+      "10_R_7130"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hello, My family and I are travelling to New York Dec 24-Jan 3. There are 2 adults and 2-3 teenagers. I realize from research on here that the aprtments are a no go. If anyone could make a few suggestions of places for us to stay. Three beds are preferred. Kitchen of some sorts to cook at least half of our meals. If I can stay under $6000 for the 10 days. Looking at hotels it seems I'd have to book 2 rooms. I'm not set on any particular area but as this is our first time in New York we don't want to be to far away from everything. Also my daughter is coming up from Long Island from YWAM so would need a place to stay from Dec 20 for 4 nights until we arrive.",
+    "answer_entity_id": "0_H_155097",
+    "all_answer_entity_list": [
+      "0_H_155097",
+      "0_H_98999"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_H_98741",
+      "0_H_98949",
+      "0_H_98951"
+    ],
+    "human_eval_top3_hit": ["0_H_98949"]
+  },
+  {
+    "question": "We're going to be in Rome for one night in January (traveling up on the train from Naples and continuing on a flight to London the next morning. ) We really want to stay near the Pantheon. We were there in 2001 and I believe we stayed at Hotel Regno. I am now looking at this hotel and also Hotel Pantheon. Is anyone familiar with either of these hotels, or any other recommendations? Also, where does the train from Naples arrive in Rome?",
+    "answer_entity_id": "13_H_84482",
+    "all_answer_entity_list": [
+      "13_H_84482"
+    ],
+    "tagged_latlongs": [
+      [
+        41.89902877807617,
+        12.47659969329834
+      ],
+      [
+        41.89942169189453,
+        12.47754955291748
+      ]
+    ],
+    "prediction": [
+      "13_H_84482",
+      "13_H_39773",
+      "13_H_84980"
+    ],
+    "human_eval_top3_hit": [
+      "13_H_84482"
+    ]
+  },
+  {
+    "question": "My buddy and I, both in our late 20's are looking for recommendations for a nice Jazz or Blues lounge for a drink. Also any comedy clubs worth checking out? and finally any good and moderately priced restaurants recommendations are appreciated. A restaurant that screams what Chicago food is about, if there is such a thing. We've already decided to visit Gino's East on E Superior St. for deep-dish pizza, but if you feel there's better we're open to suggestions. We're staying at Hotel Allegro in the Loop, somewhere near the hotel would be good, but we're willing to hop on the metro (or do you call it the L train? ) and explore the city! Thanks!",
+    "answer_entity_id": "2_R_10011",
+    "all_answer_entity_list": [
+      "2_R_10011"
+    ],
+    "tagged_latlongs": [
+      [
+        41.94989013671875,
+        -87.6586685180664
+      ],
+      [
+        41.8958350010844,
+        -87.6180000000391
+      ]
+    ],
+    "prediction": [
+      "2_R_2729",
+      "2_R_10085",
+      "2_R_2610"
+    ],
+    "human_eval_top3_hit": ["2_R_2729"]
+  },
+  {
+    "question": "Hi all,yes I know it\u00b4s a bad habit. . . But are there still restaurants in Bangkok where smoking cigarettes is allowed? I think that inside all air-conditioned restaurants it\u00b4s forbidden, but could you maybe give some advice, which restaurants still have smoking sections, maybe cigar bars or outdoor dining where one could smoke? Thank you in advance for your answers!Best regards,sanook:)",
+    "answer_entity_id": "27_R_12513",
+    "all_answer_entity_list": [
+      "27_R_12513"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "27_R_9924",
+      "27_R_4958",
+      "27_R_11324"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Looking for restaurant suggestions (good food and not inflated) within walking distance or easy metro ride of Residence Inn on Vermont Ave. Is it safe to walk in the area before 8 or 9pm? We're staying 4 nights and it looks like the McPherson Stop is the one closest to the hotel. Thanks in advance.",
+    "answer_entity_id": "1_R_4916",
+    "all_answer_entity_list": [
+      "1_R_4916"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_R_2399",
+      "1_R_4930",
+      "1_R_4421"
+    ],
+    "human_eval_top3_hit": ["1_R_2399"]
+  },
+  {
+    "question": "When we were in Vienna last time we had great schnitzel in a restaurant near the opera house - I'm trying to remember where it was. We were staying at Motel One and I seem to remember walking towards the centre on the left hand side of the Opera House. Looking at Google Maps, I think the place we went to must have been around where Do & Co Albertina is on the map, but the pictures I see of that restaurant don't match what I remember. Where we ate was more like a bierkellar/wirtshaus type place with exposed brick and rounded, cellar-like ceilings. Any suggestions?",
+    "answer_entity_id": "17_R_2573",
+    "all_answer_entity_list": [
+      "17_R_2573"
+    ],
+    "tagged_latlongs": [
+      [
+        48.20436,
+        16.36883
+      ],
+      [
+        48.16615,
+        16.39306
+      ]
+    ],
+    "prediction": [
+      "17_R_4746",
+      "17_R_5976",
+      "17_R_6012"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi, I'm planning to go to the London Riviera near London Bridge & wonfeted how long it would take to walk to Waterloo Station/Mondrian Sea Containers Restaurant with a brief stop at Globe Theatre & Millennium Bridge, if it's walkable at all. Is Sea Containers Restaurant worth making the effort for? I'm not bothered about fancy food, just somewhere with nice view of the river & where we can have a cocktail on an outdoor terrace. Pizza is fine but not sure about the big standard pubs! My table is booked at 2. 30 & our train home is 6. 30 from Euston. Am I better just sticking to the London Bridge area? Not too keen on the Shard really. Thanks",
+    "answer_entity_id": "10_R_16397",
+    "all_answer_entity_list": [
+      "10_R_16397"
+    ],
+    "tagged_latlongs": [
+      [
+        51.50445556640625,
+        -0.08650299906730652
+      ],
+      [
+        51.52760696411133,
+        -0.13246099650859833
+      ],
+      [
+        51.508262634277344,
+        -0.09717000275850296
+      ],
+      [
+        51.508056640625,
+        -0.0877780020236969
+      ],
+      [
+        51.51017379760742,
+        -0.09843800216913223
+      ]
+    ],
+    "prediction": [
+      "10_R_16461",
+      "10_R_12190",
+      "10_R_4376"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hello, I will be traveling to London at the end of November on a budget. I will be traveling with a friend and we are both vegetarians (no poultry/meat/seafood). However, we've heard London is an excellent place to dine for vegetarians because many restaurants understand/accept the vegetarian diet. We would like to limit every meal to $15 USD (inclusive of tip, tax, etc. ) so can anyone please offer suggestions for the best places to eat in London as vegetarian and on a budget? Also note that breakfast is being provided by our hotel. Thanks in advance!",
+    "answer_entity_id": "10_R_5335",
+    "all_answer_entity_list": [
+      "10_R_5335"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "10_R_15003",
+      "10_R_4349",
+      "10_R_4204"
+    ],
+    "human_eval_top3_hit": ["10_R_15003"]
+  },
+  {
+    "question": "My husband and I are headed to London/Paris this weekend, and of course I forgot it's Valentine's Day on Sunday. Can anyone suggest a restaurant (that may still have availability? ) We're eating at Dinner by Heston on Saturday, so it doesn't have to be a \"nice\" place, just good food/atmosphere. We're staying close to Westminster. Thanks!",
+    "answer_entity_id": "10_R_13290",
+    "all_answer_entity_list": [
+      "10_R_13290"
+    ],
+    "tagged_latlongs": [
+      [
+        51.488399505615234,
+        -0.3861849904060364
+      ]
+    ],
+    "prediction": [
+      "10_R_10899",
+      "10_R_13306",
+      "10_R_12190"
+    ],
+    "human_eval_top3_hit": ["10_R_12190"]
+  },
+  {
+    "question": "If you are in Palermo and want to get out of the tourist area and eat only where the locals are go to El Trapiche. It is located in Paraguay 5099-with Humbolt. Tel 4772-7343/ 4775-5793. The food is excellent and prices are local. You will not see one tourist there. I went because some friends took me there,then I went several times. If you are tired of beef try \" cochinillo al verdejo\" it is by far the best pork you will ever eat. They have everything you can think. Wines are very good. Meals for two with dessert and wine $U. S. 10. open for lunch at 1. p. m. and 7 p. m. for dinner. I went to the other tourist place in Palermo close to the square and prices are four times higher and less quality of food. I travel around the world and I know about food. It is one of my passion",
+    "answer_entity_id": "8_R_2723",
+    "all_answer_entity_list": [
+      "8_R_2723",
+      "8_R_2739",
+      "8_R_2839",
+      "8_R_7012"
+    ],
+    "tagged_latlongs": [
+      [
+        -34.58028,
+        -58.42978
+      ]
+    ],
+    "prediction": [
+      "8_R_6968",
+      "8_R_4169",
+      "8_R_6982"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "So we will be celebrating my son's 16th birthday. We have already decided we will most likely be going either to the Musuem of Natural History or The Intrepid Musuem given his interests. What I would like to know is a good family place to eat that would be convenient to that area. Preferably a good, reasonably priced pizza place. He loves pizza! We are pretty big group of about 12.",
+    "answer_entity_id": "0_R_12299",
+    "all_answer_entity_list": [
+      "0_R_12297",
+      "0_R_12299"
+    ],
+    "tagged_latlongs": [
+      [
+        40.7644157409668,
+        -73.99949645996094
+      ]
+    ],
+    "prediction": [
+      "0_R_12297",
+      "0_R_3240",
+      "0_R_12168"
+    ],
+    "human_eval_top3_hit": [
+      "0_R_12297"
+    ]
+  },
+  {
+    "question": "HiWe are staying at the Marriott for 1 night, can someone suggest a nice restaurant/cafe/bar for dinner within walking distance. Looking for either Italian or good streak place at a reasonable price. Thanks in advance.",
+    "answer_entity_id": "37_R_7066",
+    "all_answer_entity_list": [
+      "37_R_2447",
+      "37_R_6412",
+      "37_R_7066"
+    ],
+    "tagged_latlongs": [
+      [
+        -33.89497,
+        151.21103
+      ]
+    ],
+    "prediction": [
+      "37_R_7081",
+      "37_R_6614",
+      "37_R_7066"
+    ],
+    "human_eval_top3_hit": [
+      "37_R_7066"
+    ]
+  },
+  {
+    "question": "Hi, Was hoping for some suggestions of what we could do for Chrismtas Day lunch or dinner with two children ages 11 and 4. Is there any type of child friendly restaurants open on Christmas day or should we plan to make something in our hotel room. The kids are pretty well behaved in restaurants but I would prefer not to go to something too fancy as other patrons may not want children there. Thanks in advance for any help, aussie",
+    "answer_entity_id": "0_R_12141",
+    "all_answer_entity_list": [
+      "0_R_12141",
+      "0_R_3078",
+      "0_R_3122"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_12282",
+      "0_R_12211",
+      "0_R_10378"
+    ],
+    "human_eval_top3_hit": ["0_R_12211"]
+  },
+  {
+    "question": "Where to eat cheaply in Mayfair/Belgravia?",
+    "answer_entity_id": "10_R_3720",
+    "all_answer_entity_list": [
+      "10_R_13018",
+      "10_R_21410",
+      "10_R_3720"
+    ],
+    "tagged_latlongs": [
+      [
+        51.49705123901367,
+        -0.15275000035762787
+      ]
+    ],
+    "prediction": [
+      "10_R_10899",
+      "10_R_13306",
+      "10_R_12190"
+    ],
+    "human_eval_top3_hit": ["10_R_12190"]
+  },
+  {
+    "question": "We will be in London the first part of April 2007. We have the choice of the following hotels; A. Hilton London Kensington B. Hilton London Tower Bridge (new) This is our first time in London. Which Hotel would be the best to get around to see the sights. we plan on using the public bus and tube systems. Maybe someone has a better suggestion for hotels. We prefer the Hilton brand because of Hilton Honors. Also we will be arriving at Heathrow but leaving from Gatwick. Appreciate any suggestions. Thanks",
+    "answer_entity_id": "10_H_75827",
+    "all_answer_entity_list": [
+      "10_H_75827"
+    ],
+    "tagged_latlongs": [
+      [
+        51.46699905395508,
+        -0.44999998807907104
+      ],
+      [
+        51.5054817199707,
+        -0.07537999749183655
+      ],
+      [
+        51.15911,
+        -0.16335
+      ]
+    ],
+    "prediction": [
+      "10_H_40389",
+      "10_H_76081",
+      "10_H_40156"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Four of us (50 - 60) are heading to Washington DC on Wednesday March 20th through to March 24th. We are staying at the Fairmont near Georgetown. The day we arrive we are going to head to Mount Vernon and then head to Georgetown for dinner. I am trying to book a tour at the Pentagon for the 21st or 22nd but they appear not to have opened up that timeframe yet. I am told it is important to see the Canadian Embassy, the new CIA museum. . . apart from the Whitehouse could anyone suggest the best sights to see each day so that we are not backtracking and any restaurants or museums near the Fairmont that are worth visiting would be a big help. We would like to see the main attractions but also want to have some spare time for shopping and martinis. . . . any suggestions would be welcome. Thank you in advance Brenda",
+    "answer_entity_id": "1_A_2000",
+    "all_answer_entity_list": [
+      "1_A_2000",
+      "1_A_2347",
+      "1_A_2384"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_A_2374",
+      "1_A_2356",
+      "1_A_2359"
+    ],
+    "human_eval_top3_hit": ["1_A_2374"]
+  },
+  {
+    "question": "Would welcome your recommended restaurants (4/5*) for memorable Christmas Buffet. Thanks.",
+    "answer_entity_id": "29_R_11385",
+    "all_answer_entity_list": [
+      "29_R_11385"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "29_R_7386",
+      "29_R_11450",
+      "29_R_9402"
+    ],
+    "human_eval_top3_hit": ["29_R_9402"]
+  },
+  {
+    "question": "Hello everyone. . . . I am planning a trip for a week in London for June 2008. It will just be my daughter (9 years old) and I. With all the hotel options listed here on TripAdvisor, it's hard to tell/find one that would work for us. I want something in a central area (close to most/all major tourist areas), safe enough to walk around in the area in evenings and family friendly. A 3 or 4 star hotel is what I would prefer. I'm not too picky about hotels, I just prefer something clean (who doesn't). Thanks for your input!",
+    "answer_entity_id": "10_R_13999",
+    "all_answer_entity_list": [
+      "10_R_13999",
+      "10_R_14211",
+      "10_R_16120"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "10_H_40389",
+      "10_H_76081",
+      "10_H_186970"
+    ],
+    "human_eval_top3_hit": ["10_H_40389"]
+  },
+  {
+    "question": "Looking for restaurant suggestions for the following: 1. Upper West Side (76th - 92nd) not too expensive and fun for people watching, with good food! 2. Nr Broadway theatres. Not too expensive. Casual is fine. Clinton/hells kitchen area (whatever it's called now) also perfectly acceptable and maybe even more fun! Thanks!",
+    "answer_entity_id": "0_R_10944",
+    "all_answer_entity_list": [
+      "0_R_10885",
+      "0_R_10944",
+      "0_R_11431",
+      "0_R_11714",
+      "0_R_11841",
+      "0_R_12190",
+      "0_R_12403"
+    ],
+    "tagged_latlongs": [
+      [
+        40.792510986328125,
+        -73.97319793701172
+      ],
+      [
+        40.75755,
+        -73.98564
+      ]
+    ],
+    "prediction": [
+      "0_R_12282",
+      "0_R_12168",
+      "0_R_11993"
+    ],
+    "human_eval_top3_hit": ["0_R_12282"]
+  },
+  {
+    "question": "My husband & I will be going soon to San Francisco & would like a really cool restaurant to eat at on our Anniversary. We're staying in the Fisherman's Wharf area, but location doesn't matter. We were there for our 20th but didn't know where to go then. Would love some suggestions.",
+    "answer_entity_id": "3_R_6803",
+    "all_answer_entity_list": [
+      "3_R_2488",
+      "3_R_2498",
+      "3_R_2528",
+      "3_R_2656",
+      "3_R_6603",
+      "3_R_6699",
+      "3_R_6723",
+      "3_R_6736",
+      "3_R_6775",
+      "3_R_6791",
+      "3_R_6797",
+      "3_R_6799",
+      "3_R_6803",
+      "3_R_6844",
+      "3_R_6863",
+      "3_R_6885"
+    ],
+    "tagged_latlongs": [
+      [
+        37.80892,
+        -122.41448
+      ]
+    ],
+    "prediction": [
+      "3_R_6838",
+      "3_R_6885",
+      "3_R_6880"
+    ],
+    "human_eval_top3_hit": [
+      "3_R_6885"
+    ]
+  },
+  {
+    "question": "Booked and anxiously awaiting third visit in five years. Traveling w/ Mrs eephus this time instead of my teenage son, so no late night trips to the videogame arcade in Chinatown. We arrive on her birthday and I'm planning a romantic stroll somewhere followed by a late night dinner. I was thinking of Greenwich Village but heard reports of delayed construction in Washington Square. We'll be there late on a Sunday so I don't worry about workmen but if large sections of the park are torn up, I might look elsewhere. Is the park recognizable these days? If not, are there any other ideas for locations that are both romantic and iconic?",
+    "answer_entity_id": "0_A_2983",
+    "all_answer_entity_list": [
+      "0_A_2983"
+    ],
+    "tagged_latlongs": [
+      [
+        40.72856140136719,
+        -74.00489044189453
+      ],
+      [
+        40.716461181640625,
+        -73.99675750732422
+      ]
+    ],
+    "prediction": [
+      "0_A_3047",
+      "0_A_3035",
+      "0_A_3030"
+    ],
+    "human_eval_top3_hit": ["0_A_3047"]
+  },
+  {
+    "question": "I will be in Chicago this week with my 13 year old son for the Nike Bauer AAA International Invite Hockey Tournament. I am told there will be about 280 youth hockey teams from around the world at the tournament. I am looking for suggestions for places to eat (breakfast and dinner). . . preferably places that are unique to Chicago. Thank you.",
+    "answer_entity_id": "2_R_2951",
+    "all_answer_entity_list": [
+      "2_R_2951"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "2_R_10153",
+      "2_R_2631",
+      "2_R_10219"
+    ],
+    "human_eval_top3_hit": ["2_R_2631"]
+  },
+  {
+    "question": "Group of 10 of us coming to Dublin on the August Bank Holiday weekend for my \"stag do\" and I just wondered how well received large groups of blokes are in the city center, as there tends to be a negative stigma attached particularly where \"Stag parties\" are concerned, certainly in Manchester where I'm from. To be clear, we're not going to be an obvious stag party, with matching tshirts with stupid nicknames on our backs and over the top rowdy behavior etc, we're just a group of mid 30s blokes who like their beer hoping to take in as many good Dublin pubs as poss over our 2 night stay. Obviously we'll gravitate towards temple bar at some point no doubt, but we'll also want to explore the many other good pubs in the surrounding areas, so I guess my main question is does anyone know if we will have issues getting in to places and thus need to consider splitting into smaller groups whenever we move around? Cheers Guys Andy",
+    "answer_entity_id": "11_R_4379",
+    "all_answer_entity_list": [
+      "11_R_4185",
+      "11_R_4379"
+    ],
+    "tagged_latlongs": [
+      [
+        53.34502029418945,
+        -6.265719890594482
+      ]
+    ],
+    "prediction": [
+      "11_R_3333",
+      "11_R_4490",
+      "11_R_4449"
+    ],
+    "human_eval_top3_hit": ["11_R_3333"]
+  },
+  {
+    "question": "Hello I will be attending an event at Milltown Conference Centre, Ranelagh, Dublin 6 in October, and am looking for accommodation nearby. I'd like to stay somewhere nice and not too expensive, and don't know Dublin at all. Any recommendation? would consider hotels or B&Bs. many thanks A Yorkshire traveller",
+    "answer_entity_id": "11_H_41288",
+    "all_answer_entity_list": [
+      "11_H_41288"
+    ],
+    "tagged_latlongs": [
+      [
+        53.30918,
+        -6.24528
+      ],
+      [
+        53.32535934448242,
+        -6.252769947052002
+      ]
+    ],
+    "prediction": [
+      "11_H_41440",
+      "11_H_41399",
+      "11_H_41423"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Tu Lan, a Vietnamese restaurant on 6th Street which has been living for years off of visits and favorable comments from Julia Child in the mid 80's may have served its last G\u00f2i Cuon. After a series of inspections found serious health code violations dph-extranet2. sfdph. org:7777/pls/\u2026 , the San Francisco Department of Public Health finally lowered the boom and temporarily suspended Tu Lan's permit to operate pending an administrative hearing next week. At the hearing this operating permit could be permanently revoked. sfgate. com/restaurants/article/Tu-Lan-closed\u2026 \u2026sfgate. com/blog/\u2026 Simba_8, who frequently recommends Tu Lan in this forum will have to find another source of blubber.",
+    "answer_entity_id": "3_R_6701",
+    "all_answer_entity_list": [
+      "3_R_6701"
+    ],
+    "tagged_latlongs": [
+      [
+        37.7795300003196,
+        -122.406864999182
+      ],
+      [
+        37.77775,
+        -122.41203
+      ]
+    ],
+    "prediction": [
+      "3_R_6847",
+      "3_R_6811",
+      "3_R_5560"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "My husband and I will be in Chicago for a wedding. We want a nice, romantic dinner on a Friday night. We're willing to spend $50 per person without alcohol. . . suggestions?",
+    "answer_entity_id": "2_R_2726",
+    "all_answer_entity_list": [
+      "2_R_10170",
+      "2_R_2726",
+      "2_R_9710"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "2_R_2616",
+      "2_R_9710",
+      "2_R_9986"
+    ],
+    "human_eval_top3_hit": [
+      "2_R_9710"
+    ]
+  },
+  {
+    "question": "I'm leaving for Rome next week and I am craving my fave Italian dish spaghetti alla carbonara. I haven't been to Rome for over 6 years and can't remember the places I have eaten at. Any good restaurant recommendations would be greatly appreciated. Grazie Mille! P. S. I am staying near the Trevi Fountain.",
+    "answer_entity_id": "13_R_11184",
+    "all_answer_entity_list": [
+      "13_R_11184"
+    ],
+    "tagged_latlongs": [
+      [
+        41.90090560913086,
+        12.483345031738281
+      ]
+    ],
+    "prediction": [
+      "13_R_8849",
+      "13_R_5094",
+      "13_R_3753"
+    ],
+    "human_eval_top3_hit": ["13_R_8849"]
+  },
+  {
+    "question": "I plan to be in the city for the opening of the Christo Gates installation. Any recommendations for hotel view rooms along Central Park West or East? Thanks",
+    "answer_entity_id": "0_H_99066",
+    "all_answer_entity_list": [
+      "0_H_99066"
+    ],
+    "tagged_latlongs": [
+      [
+        40.66643142700195,
+        -73.8826904296875
+      ],
+      [
+        40.788330078125,
+        -74.0152587890625
+      ]
+    ],
+    "prediction": [
+      "0_H_98741",
+      "0_H_98949",
+      "0_H_98951"
+    ],
+    "human_eval_top3_hit": ["0_H_98741"]
+  },
+  {
+    "question": "Hi, we will be spending 4 days in NYC. We will be staying at the Holiday Inn Express on Fifth Ave. We are a family of 2 adults and 2 teenagers on a budget. Can anyone recommend some cheap places to eat? Thanxs.",
+    "answer_entity_id": "0_R_3177",
+    "all_answer_entity_list": [
+      "0_R_11074",
+      "0_R_12341",
+      "0_R_3177"
+    ],
+    "tagged_latlongs": [
+      [
+        40.7649200000155,
+        -73.9733900000722
+      ]
+    ],
+    "prediction": [
+      "0_R_12297",
+      "0_R_12168",
+      "0_R_3240"
+    ],
+    "human_eval_top3_hit": ["0_R_12297"]
+  },
+  {
+    "question": "Hi folks! Can anyone tell me where the Marx and Engels memorial statue is? Really want to go see it when i'm back in Berlin (in 2 weeks hee hee!)but can't seem to find out where it is! Thanks in advance!",
+    "answer_entity_id": "18_A_2768",
+    "all_answer_entity_list": [
+      "18_A_2768"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "18_A_2754",
+      "18_A_2769",
+      "18_A_2767"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Does anyone know of any unique restaurants that would be an interesting experience for a 10 year old? Jekyll and Hyde would terrify her, and she's more \"adult\" than the Hard Rock/Rainforest Cafe set. (example, in Boston we found a place where the chairs at the tables are swings. . . ) Thanks for the help! -Jenmol",
+    "answer_entity_id": "0_R_12211",
+    "all_answer_entity_list": [
+      "0_R_12211"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_12168",
+      "0_R_12001",
+      "0_R_4619"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi, We're travelling to NYC in September and are meeting friends at a bar on East 84th between 2nd & 3rd Avenue. Has anyone any recommendations for a good restaurant in the area? We're open to all types of cuisine. Thanks, Audrey",
+    "answer_entity_id": "0_R_10510",
+    "all_answer_entity_list": [
+      "0_R_10510",
+      "0_R_10529",
+      "0_R_10969"
+    ],
+    "tagged_latlongs": [
+      [
+        40.7286699895902,
+        -73.9905449748858
+      ]
+    ],
+    "prediction": [
+      "0_R_12077",
+      "0_R_12270",
+      "0_R_3060"
+    ],
+    "human_eval_top3_hit": ["0_R_12077"]
+  },
+  {
+    "question": "I am planning to travel to Newyork in November for 3-4 days. I would like some advise on choosing an area and possibly if you could recommend a hotel which can keep me close to the main attractions (like 10-15min subway ride) and where the prices of the hotels are reasonable. . I am looking for a 3* hotel at around 100$ per night budget. .",
+    "answer_entity_id": "0_H_98873",
+    "all_answer_entity_list": [
+      "0_H_98873"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_H_98741",
+      "0_H_98949",
+      "0_H_98951"
+    ],
+    "human_eval_top3_hit": ["0_H_98741"]
+  },
+  {
+    "question": "Flying in next Thursday night, mtg up with a colleague late Friday afternoon, so have a spare day. Staying at the airport then heading off early morning to make the most of the day. So: 1. where can we leave our bags for the day? 2. what part of the city do we head for? 3. how do we get there from the Ibis at the Airport 4. we've got all day until abt 3pm, so where do we go to hang out in a cool area ? (somewhere like Bastille in Paris would be good). Not interested in Brown cafe's. Just somewhere to chill out eat and see a bit of the city. Where are the Christmas/Winter markets? and ice skating (as weve got time to kill on Sat and Sunday too). (not into doing any Museums/Gallery's) thks for you help! Edited: 06 December 2012, 23:18",
+    "answer_entity_id": "22_A_2012",
+    "all_answer_entity_list": [
+      "22_A_2012",
+      "22_A_2018"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "22_A_2408",
+      "22_A_2011",
+      "22_A_2427"
+    ],
+    "human_eval_top3_hit": ["22_A_2408"]
+  },
+  {
+    "question": "Anyone have suggestions for restaurants in Dublin, preferably moderately-priced, that are open on Sundays? The King Sitric and Lord Edward, which were at the top of my list, are both closed on Sunday. As you can tell, seafood restaurants preferred, but not essential.",
+    "answer_entity_id": "11_R_4463",
+    "all_answer_entity_list": [
+      "11_R_4463"
+    ],
+    "tagged_latlongs": [
+      [
+        53.34382,
+        -6.26897
+      ]
+    ],
+    "prediction": [
+      "11_R_4455",
+      "11_R_4526",
+      "11_R_2723"
+    ],
+    "human_eval_top3_hit": ["11_R_4455"]
+  },
+  {
+    "question": "Four of us (two senior couples) are visiting Vancouver for one week from Sept. 1. We will be staying in a highrise in Gastown (108 West Cordova Street). We will have a rental car. We plan to drive to Whistler, Ferry to Victoria and Butchart Gardens, Hop On, Hop Off City Tour, go through Stanley Park, see the suspension bridge. Does anyone have any suggestions for: 1. Further Tours - Museums 2. Restaurants (medium priced) - China Town, Italian, Seafood? 3. Clothes this time of year - umbrella? None of us have been to Vancouver before, so we are really looking forward to it. Thanks in advance. Ferd",
+    "answer_entity_id": "6_R_5265",
+    "all_answer_entity_list": [
+      "6_R_5264",
+      "6_R_5265",
+      "6_R_5268"
+    ],
+    "tagged_latlongs": [
+      [
+        49.30105972290039,
+        -123.13572692871094
+      ],
+      [
+        49.28364181518555,
+        -123.10646057128906
+      ],
+      [
+        49.13441,
+        -123.1496
+      ],
+      [
+        49.19695,
+        -122.84879
+      ],
+      [
+        49.279930114746094,
+        -123.09971618652344
+      ],
+      [
+        49.28262,
+        -123.10796
+      ]
+    ],
+    "prediction": [
+      "6_R_5283",
+      "6_R_5241",
+      "6_R_2307"
+    ],
+    "human_eval_top3_hit": ["6_R_5283"]
+  },
+  {
+    "question": "Hi, Any suggestions about breakfast on Lower east Village on Sunday? Thanks",
+    "answer_entity_id": "0_R_11930",
+    "all_answer_entity_list": [
+      "0_R_11930"
+    ],
+    "tagged_latlongs": [
+      [
+        40.7280387878418,
+        -73.98499298095703
+      ]
+    ],
+    "prediction": [
+      "0_R_11851",
+      "0_R_3087",
+      "0_R_11979"
+    ],
+    "human_eval_top3_hit": ["0_R_11851"]
+  },
+  {
+    "question": "Hi. This is our last night in Rome and we are looking for a nice place to eat in this area. Thanks in advance",
+    "answer_entity_id": "13_R_13363",
+    "all_answer_entity_list": [
+      "13_R_13363"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "13_R_8849",
+      "13_R_3775",
+      "13_R_3753"
+    ],
+    "human_eval_top3_hit": ["13_R_3775"]
+  },
+  {
+    "question": "I was wondering if we want to get deli products for breakfast or a snack in the room after a long day, is there a place to get bread, cheese, fresh fruits. . . etc. we will be staying at hotel forte near the spanish steps MiM",
+    "answer_entity_id": "13_R_4170",
+    "all_answer_entity_list": [
+      "13_R_4170"
+    ],
+    "tagged_latlongs": [
+      [
+        41.90647888183594,
+        12.481588363647461
+      ]
+    ],
+    "prediction": [
+      "13_R_8849",
+      "13_R_10971",
+      "13_R_10933"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Looking for recommendations for a good restaurants within a few blocks of TS. Price range for dinner should be low to moderate with entrees ranging between 15 and 25 dollars. We like most types of food. suggestions?",
+    "answer_entity_id": "0_R_11823",
+    "all_answer_entity_list": [
+      "0_R_11823"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_12198",
+      "0_R_12168",
+      "0_R_10804"
+    ],
+    "human_eval_top3_hit": ["0_R_12198"]
+  },
+  {
+    "question": "staying at the Hilton Garden inn Me,wife 2 teenage boys. arrive september 6(8. 00pm) depart sept 9 day 1- A. M catch water taxi to madison ave, walk to willis tower, have a look. (find somewhere for lunch) Walk to Millenium and Grant park. Then walk back to hotel via michigan stopping at the citywalk and any shops on the way. Looking for a place for dinner nearby to our hotel. day 2- shopping up the magnificent mile in the morning then over to navy pier in the afternoon before (hopefully getting a ticket to the cubs) up to wrigley field. (playing reds wednesday oct 7) Will we fit all this in? ? We are fit so walking for a few hours in a day is no probs. . Can anyone suggest restaurants close to our hotel for dinner and also somewhere for breakfast. (nothing to posh!) Is downtown a safe area ? ? anybody with suggestions to add to our itinery or suggestions to change to our itinery. . . cheers",
+    "answer_entity_id": "2_R_2757",
+    "all_answer_entity_list": [
+      "2_R_10196",
+      "2_R_2757"
+    ],
+    "tagged_latlongs": [
+      [
+        41.87868118286133,
+        -87.63667297363281
+      ],
+      [
+        41.87577819824219,
+        -87.62035369873047
+      ],
+      [
+        41.947566986083984,
+        -87.65619659423828
+      ],
+      [
+        41.891685485839844,
+        -87.60834503173828
+      ],
+      [
+        41.87834167480469,
+        -87.6199722290039
+      ]
+    ],
+    "prediction": [
+      "2_R_10153",
+      "2_R_2631",
+      "2_R_10213"
+    ],
+    "human_eval_top3_hit": ["2_R_10153"]
+  },
+  {
+    "question": "I will be in Sydney for New&#39;s Year Eve &amp; would like to treat my girlfriend to a couple of nights luxury at a quality hotel in the &quot;Rocks&quot; area - also a choice of eating venue where we can enjoy the harbour, fireworks etc would be appreciated. Also, as I&#39;m travelling down from Cairns &amp; expect to be inBrisbaneor south of Brisbane by xmas eve - could anyone reccomend a place to be for xmas day or a fantastic venue/restaurant to book if possible ? I had considered fraser island as a possible but it is too far north. Apologies about the ambiquity but would like to tap up some local knowledge. Many thanks in advance",
+    "answer_entity_id": "37_H_186841",
+    "all_answer_entity_list": [
+      "37_H_186841"
+    ],
+    "tagged_latlongs": [
+      [
+        -33.86963,
+        151.07171
+      ]
+    ],
+    "prediction": [
+      "37_R_6614",
+      "37_R_7081",
+      "37_R_5577"
+    ],
+    "human_eval_top3_hit": ["37_R_6614"]
+  },
+  {
+    "question": "Hi all. Would love your help I have to be in Chicago for an exam this weekend and will be done around noon tomorrow (4/9/16). I have a late flight on 4/10/16 from Midway. Weather this weekend is not great but still don't want to waste the 30hrs of freedom. I do have a rental car to consider when figuring out things to do. What is a central location for things to do Saturday and Sunday? I am willing to park at a central location and do a ton of walking. I could be up for 1 or 2 museums but really want to see more of the outdoors even if I need to buy an umbrella :) If you recommend a central location, what are places to eat as well? I'm go with the flow so will take any suggestions. Oh my hotel is close to Ohare. Thanks for reading and making last minute suggestions :)",
+    "answer_entity_id": "2_R_10243",
+    "all_answer_entity_list": [
+      "2_R_10215",
+      "2_R_10243",
+      "2_R_9906"
+    ],
+    "tagged_latlongs": [
+      [
+        41.96636962890625,
+        -87.84857940673828
+      ],
+      [
+        41.7872200012207,
+        -87.74160766601562
+      ]
+    ],
+    "prediction": [
+      "2_R_10197",
+      "2_R_10211",
+      "2_R_9986"
+    ],
+    "human_eval_top3_hit": ["2_R_10197"]
+  },
+  {
+    "question": "My husband and I are staying at The Merrion Hotel and will arrive in time the first day to be able to ride the HOHO bus the later part of the afternoon. What could be a plan for our second day and main sights to see? Also, good restaurant and pub suggestions? We are eating at the hotel our last evening at Restaurant Patrick. On one day, should we take a day trip out of Dublin? We will not be picking up our car until the morning we check out and head towards Cork.",
+    "answer_entity_id": "11_R_4276",
+    "all_answer_entity_list": [
+      "11_R_4276"
+    ],
+    "tagged_latlongs": [
+      [
+        53.33847427368164,
+        -6.252900123596191
+      ],
+      [
+        53.34015,
+        -6.27218
+      ]
+    ],
+    "prediction": [
+      "11_R_2723",
+      "11_R_4526",
+      "11_R_4463"
+    ],
+    "human_eval_top3_hit": ["11_R_2723"]
+  },
+  {
+    "question": "I will be traveling to Switzerland and Italy beginning this weekend with my family; 2 adolescents, 2 forty year olds and 2 sixty year olds. I am looking for three great suggestions: 1 - Restaurant - family oriented, affordable and great local food. 1 - Experience - off the typical tourist track, not to be missed. 1 - Photo Location - a great locale to capture the essence of the city. I appreciate any suggestions you might have. Ciao!",
+    "answer_entity_id": "13_R_3940",
+    "all_answer_entity_list": [
+      "13_R_3940"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "13_R_8849",
+      "13_R_9775",
+      "13_R_10971"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi everyone! My husband and I will be flying from Italy back to the U. S. with a 6. 5 hour stopover in Dublin. We land at 11:50 pm from Italy on a Sunday and take off at 6:30 am on a Monday for the U. S. We would love to take the time to go out to the Temple Bar area. Is this feasible? Also, at this time of night, is there a place to leave our bags at the airport? We will only have backpacks, but would prefer not to lug them to the bars. I would think that we would have our boarding passes already for our next flights, but may need to re-check at the airport since it will be a different airline (booked on miles via star alliance. . . aer lingus and Ethiopian air). Thank you!",
+    "answer_entity_id": "11_R_3574",
+    "all_answer_entity_list": [
+      "11_R_3333",
+      "11_R_3574"
+    ],
+    "tagged_latlongs": [
+      [
+        53.3456,
+        -6.26305
+      ]
+    ],
+    "prediction": [
+      "11_R_3326",
+      "11_R_2723",
+      "11_R_4451"
+    ],
+    "human_eval_top3_hit": ["11_R_3326"]
+  },
+  {
+    "question": "I again am turning all you wonderful advisors in DC. We will be in Washington this summer ( for those that missed my earlier post-our daughter is going to the JYNLC). So Mom and Dad will have plenty of free time on their hands! I was looking for a few dining choices. Last summer tried a few places recommended on this sight and they were right target. We like all types of food-but mostly American, seafood, my husband is a huge steak lover, Chinese etc. We are not into French, tapas is okay but not too crazy about it. I remember last year reading on this site about a place (sounded good for lunch) that served mini burgers? ? Anyway all suggestions are welcomed.",
+    "answer_entity_id": "1_R_2393",
+    "all_answer_entity_list": [
+      "1_R_2393"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_R_2399",
+      "1_R_4930",
+      "1_R_4941"
+    ],
+    "human_eval_top3_hit": ["1_R_2399"]
+  },
+  {
+    "question": "My husband and I (28), are staying at Hotel Sofitel 45 West 44th street, we should get to Hotel around 4pm on Friday. Have no plans for this day, just wanted walk around, and enjoy a nice dinner and drinks. Any suggestions would be greatly appreciated.",
+    "answer_entity_id": "0_R_3051",
+    "all_answer_entity_list": [
+      "0_R_12231",
+      "0_R_3051"
+    ],
+    "tagged_latlongs": [
+      [
+        40.755848,
+        -73.981728
+      ]
+    ],
+    "prediction": [
+      "0_R_3077",
+      "0_R_12221",
+      "0_R_12365"
+    ],
+    "human_eval_top3_hit": ["0_R_3077"]
+  },
+  {
+    "question": "Hello, My wife and I will be heading to San Francisco for the first time from July 26 - Aug 3. My wife will be turning 40 while we are in town, and I would like to arrange for a special dinner for her somewhere nice. I was thinking something by the water that might do a chef's table or something special like that. We both like pretty much everything so I'm not too worried about the type of food, but I really would like the place to be very \"San Francisco\" (if that makes sense). Any suggestions are appreciated! Thanks!",
+    "answer_entity_id": "3_R_6861",
+    "all_answer_entity_list": [
+      "3_R_2488",
+      "3_R_2583",
+      "3_R_2907",
+      "3_R_6569",
+      "3_R_6603",
+      "3_R_6604",
+      "3_R_6660",
+      "3_R_6763",
+      "3_R_6791",
+      "3_R_6803",
+      "3_R_6838",
+      "3_R_6844",
+      "3_R_6861",
+      "3_R_6880",
+      "3_R_6885"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "3_R_6885",
+      "3_R_6835",
+      "3_R_2488"
+    ],
+    "human_eval_top3_hit": [
+      "3_R_2488"
+    ]
+  },
+  {
+    "question": "Will be attending the San Generro Festival in Little Italy and then have plans to visit the 9/11 Museum (tickets purchased). What is the best means of transportation from Little Italy to the museum? Is this a walkable distance and if so what is the best route?",
+    "answer_entity_id": "0_A_2897",
+    "all_answer_entity_list": [
+      "0_A_2897"
+    ],
+    "tagged_latlongs": [
+      [
+        40.718910217285156,
+        -73.99609375
+      ],
+      [
+        40.718910217285156,
+        -73.99609375
+      ]
+    ],
+    "prediction": [
+      "0_A_2992",
+      "0_A_2982",
+      "0_A_3037"
+    ],
+    "human_eval_top3_hit": ["0_A_2992"]
+  },
+  {
+    "question": "Having read all through this forum and the metro website, I still need help from you, please. I don't want to buy a smarttrip card because it cost $5. 00 just for the card. I don't want the 7 day short trip card because of the time limitations. But can I buy a farecard and put as much on it as I want, or do you have to buy a new one for each trip? Also can you use a credit card or you must use cash? Also anyone out there have a suggestion for a good seafood restaurant in Rosslyn or DC? Help me out here please!",
+    "answer_entity_id": "1_R_2528",
+    "all_answer_entity_list": [
+      "1_R_2528",
+      "1_R_2552",
+      "1_R_3697",
+      "1_R_3808"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_R_2399",
+      "1_R_4943",
+      "1_R_4930"
+    ],
+    "human_eval_top3_hit": ["1_R_4943"]
+  },
+  {
+    "question": "I have 1 week inThailandto plan. I&#39;m wanting to spend 2 days in Bangkok, then 5 days on PhiPhi Island. Can anyone recommend any places in Bangkok? I&#39;m not looking for dingy but not over the top either. Just safe, clean and walking distance from any recommended must-sees. (How do you generally get around once you land in BKK? )On PhiPhi Island, I would like to stay somewhere I won&#39;t feel like I&#39;m witnessing everyone&#39;s honeymoon. . . . . . . again safe and close to shopping and dining. Also, any highly recommended activities during my short stay? I would love to learn deep sea diving. . . . . . I haven&#39;t purchased my flight from Bangkok toPhuketyet. Do the prices stay the same as I get closer to the date of travel or should I book asap? Lastly, are there several boats to take you to PhiPhi? How can I find the cheapest rates? Thanks for any help.",
+    "answer_entity_id": "27_H_10872",
+    "all_answer_entity_list": [
+      "27_H_10872"
+    ],
+    "tagged_latlongs": [
+      [
+        13.72417,
+        100.53201
+      ]
+    ],
+    "prediction": [
+      "27_R_9924",
+      "27_R_11324",
+      "27_A_2489"
+    ],
+    "human_eval_top3_hit": ["27_A_2489"]
+  },
+  {
+    "question": "We will be staying at the Radisson Blu at 20 Mercer Street; arriving Heathrow on Delta from USA on Saturday around 9:00 AM. Could anyone suggest the best way to get to our hotel? If tube, would appreciate knowing line and stop. Thank you!",
+    "answer_entity_id": "10_A_3516",
+    "all_answer_entity_list": [
+      "10_A_3516"
+    ],
+    "tagged_latlongs": [
+      [
+        51.5142248,
+        -0.1271308
+      ],
+      [
+        51.46699905395508,
+        -0.44999998807907104
+      ]
+    ],
+    "prediction": [
+      "10_A_3516",
+      "10_A_3602",
+      "10_A_3126"
+    ],
+    "human_eval_top3_hit": [
+      "10_A_3516"
+    ]
+  },
+  {
+    "question": "I am looking for a place to have a nice lunch at that is near Ford's Theatre and the Nat'l Portrait Gallery. Preferably not fast food, but not so fancy that the kids (age 9 &10) won't eat. Here is my plan for that day - (is this too much? ? ? ) We have 9 am tickets for Ford's. I am thinking we will go to lunch around 11am. Following lunch I have planned a stop at the Natl Portrait Gallery, then ticket reservations at the National Archives for 3:45. Following that we will probably grab something for dinner to-go, or get a pizza delivered to hotel and hang out at the pool.",
+    "answer_entity_id": "1_R_4632",
+    "all_answer_entity_list": [
+      "1_R_2588",
+      "1_R_2970",
+      "1_R_4632",
+      "1_R_4891"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_R_4943",
+      "1_R_2402",
+      "1_R_2399"
+    ],
+    "human_eval_top3_hit": ["1_R_4943"]
+  },
+  {
+    "question": "My mother and her partner, both in their 80s will be spending several days in Amsterdam before heading to Africa for a tour. Their budget is less than $150 US/night, and of course they would like a central location sightseeing, museums, etc. They were initially thinking of staying near the airport, but I think that I have talked them out of that idea. What areas should they consider? And any specific suggestions for hotels? Thanks",
+    "answer_entity_id": "22_H_38445",
+    "all_answer_entity_list": [
+      "22_H_38445"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "22_H_37786",
+      "22_H_37864",
+      "22_H_151564"
+    ],
+    "human_eval_top3_hit": ["22_H_37786"]
+  },
+  {
+    "question": "Hi, any recommendations for places to eat breakfast and dinner near the Salisbury? Not fussed about expensive places, just nice food, value for money and nice atmosphere. For breakfast any good diners to get the real NY breakfast experience? Thanks!",
+    "answer_entity_id": "0_R_12190",
+    "all_answer_entity_list": [
+      "0_R_11893",
+      "0_R_12190"
+    ],
+    "tagged_latlongs": [
+      [
+        40.74557876586914,
+        -73.56002044677734
+      ]
+    ],
+    "prediction": [
+      "0_R_3151",
+      "0_R_11804",
+      "0_R_12211"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "I forgot to ask the most important thing when it comes to sightseeing! What kind of snacks/sweets should I bring with me and try? I do not want anything American, because I can get them in America. But what I would like suggestions on are English snacks and sweets that are easy to carry while I sightsee. Plus it wouldn't hurt if they weren't too expensive. Thanks again, Anthony Woot! Woot! Just 3 more days till my flight to London! 4 Days till I am on British Soil! I am sooooo excited. . . .",
+    "answer_entity_id": "10_R_5072",
+    "all_answer_entity_list": [
+      "10_R_5072"
+    ],
+    "tagged_latlongs": [
+      [
+        51.52302,
+        -0.03081
+      ],
+      [
+        51.49319,
+        -0.24529
+      ]
+    ],
+    "prediction": [
+      "10_R_16461",
+      "10_R_20676",
+      "10_R_4376"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "My best friend and I are going to Chicago this weekend and are looking for some nice bars to go to that skew a bit older (we're 36). Any restaurant suggestions would be appreciated also. We're staying at the Marriott downtown. Thanks!",
+    "answer_entity_id": "2_R_10197",
+    "all_answer_entity_list": [
+      "2_R_10197"
+    ],
+    "tagged_latlongs": [
+      [
+        41.87834167480469,
+        -87.6199722290039
+      ]
+    ],
+    "prediction": [
+      "2_R_2729",
+      "2_R_2610",
+      "2_R_10085"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "I will be traveling with a friend to BA and will arrive this Saturday. We will only be there for 4 to 5 days and want to be sure to see all that we can. What would anyone suggest as \"don't miss\" attractions? We are staying in the Recoleta area. Keep in mind that we are two women who like to SHOP, eat good food, drink great wine and do want to see all of the culture that we can in the short time that we are there. We also don't mind walking and will obviously not be sleeping much as to make the most of our trip! P. S. Tripadvisor has been very helpful in my planning of this trip thus far. Thank you",
+    "answer_entity_id": "8_R_6763",
+    "all_answer_entity_list": [
+      "8_R_6763"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "8_R_4169",
+      "8_R_6881",
+      "8_R_6695"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi All, I was after some help. My girlfriend and her friend are visiting NYC for 4 nights in Feb 09. Myself and her friends partner were hoping to surprise them and buy them something for Christmas for there trip. The ideas I had are:> Bottle of champagne at hotel for when they check in. (not sure how I would go about this) Buy some tickets for a show, if so. Any recommendations A restaurant voucher/coupon for a nice restaurant Some sort of tour I know they really like cocktails, so are there any good cocktail bars you can recommend Of course any other suggestions, would be appreciated. Some background on the visit. They are staying for 4 nights at Affinia Manhattan, they are looking to do a mixture of shopping and sightseeing and basically enjoying themselves, they are both in their early 30's. We are looking to spend around $100 each. Once again any suggestions, advice is highly appreciated.",
+    "answer_entity_id": "0_R_3372",
+    "all_answer_entity_list": [
+      "0_R_3372",
+      "0_R_3464",
+      "0_R_9135"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_8768",
+      "0_R_7775",
+      "0_R_12270"
+    ],
+    "human_eval_top3_hit": ["0_R_8768"]
+  },
+  {
+    "question": "Have any families out there had any luck finding hotel accomodations in Buenos Aires that allow the kids to stay in the room with you. We're a family of 4 and would like to save money by booking a single room with 2 double bed instead of 2 separate rooms. So far I haven't had any luck findng one. Even the hotels the guides books rate as family friendly don't allow more than 3 people in a room. Renting 2 rooms per night will double our costs and make this a very expensive holiday. We do plan on renting an apartment for most of our stay. However there are several single nights that we need 1 night accomodation as we plan to come and go from Buenos Aires to other destinations. Being from Canada where we never have a problem booking a room for a family of 4 (usually at no additional cost) I'm having a real hard time getting my head around the idea of having to book 2 rooms for a night. Oddly enough we aren't having this same problem in Uruguay!",
+    "answer_entity_id": "8_H_33832",
+    "all_answer_entity_list": [
+      "8_H_33832",
+      "8_H_34101"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "8_H_33832",
+      "8_H_2667",
+      "8_H_1816"
+    ],
+    "human_eval_top3_hit": [
+      "8_H_33832"
+    ]
+  },
+  {
+    "question": "Will be in NY for first time on March 12. What are musts to do and where are good places to eat near Marriott Marquis Times Sq.",
+    "answer_entity_id": "0_R_12282",
+    "all_answer_entity_list": [
+      "0_R_12282"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_12198",
+      "0_R_12168",
+      "0_R_12215"
+    ],
+    "human_eval_top3_hit": ["0_R_12198"]
+  },
+  {
+    "question": "Hello!Decided to go to Bangkok for New Years, as a start of our honeymoon. Would like to do somethin special for the day, any recommendation for different events/places ? We like fine dining, but also genuin local food:)Partywise it does not need to be a rave party, we are a calm couple in our late twenties. Any help :)?",
+    "answer_entity_id": "27_R_12517",
+    "all_answer_entity_list": [
+      "27_R_12517"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "27_R_9924",
+      "27_R_12413",
+      "27_R_12517"
+    ],
+    "human_eval_top3_hit": [
+      "27_R_12517"
+    ]
+  },
+  {
+    "question": "I will be coming to New york mid Feb and will be staying at Affinia Dumont for 5 nights. Could anybody recommend some good places to eat?",
+    "answer_entity_id": "0_R_3138",
+    "all_answer_entity_list": [
+      "0_R_11640",
+      "0_R_3138",
+      "0_R_8306"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_12282",
+      "0_R_11993",
+      "0_R_12168"
+    ],
+    "human_eval_top3_hit": ["0_R_12282"]
+  },
+  {
+    "question": "Are there any Sunday services in Polish churches where they still have mass in Polish. German is fine too. Figured Polish would be my best shot.",
+    "answer_entity_id": "2_A_2383",
+    "all_answer_entity_list": [
+      "2_A_2383",
+      "2_A_2406"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "2_A_2530",
+      "2_A_2544",
+      "2_A_2545"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Sheesh! I've been going through menupages, reading guide books, and reading loads of posts here and I just don't know what to do. We have two nights of theater. . . this Friday and Saturday. . . and would like to have reservations and a relatively nice place each time. I'd like a steakhouse one night, but feel Peter Lugar's is out of my price range. Keen's is pushing it, so I've been looking at Ben & Jack's, but not reading real favorable reviews. Any other suggestions? I'm thinking of Southside Cafe' for the other night. We'd like some nice Italian, about same price range-$30-40 per entree. Any recommendations instead? There's only 2 of us, me and my 13 y/o daughter. I'm sure you all get sick of this kind of question and I'm sorry I had to ask. I've jotted down other ideas for lunch and dinner, depending upon where we are in the city and will just play it by ear and happenstance. Just these two nights I want something more solid. Thanks so much for all your help. . . only 3 more sleeps till we're there!",
+    "answer_entity_id": "0_R_11893",
+    "all_answer_entity_list": [
+      "0_R_11845",
+      "0_R_11893",
+      "0_R_12009",
+      "0_R_12172"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_11993",
+      "0_R_12009",
+      "0_R_11893"
+    ],
+    "human_eval_top3_hit": [
+      "0_R_11893"
+    ]
+  },
+  {
+    "question": "My husband and I will be in London at the beginning of May and staying in the Knightsbridge area. We have never been to London before and are looking for recommendations for restaurants and pubs in that area. We are looking for good food and good atmosphere. We are in our early 30s. Thank you!",
+    "answer_entity_id": "10_R_19327",
+    "all_answer_entity_list": [
+      "10_R_19327",
+      "10_R_3867"
+    ],
+    "tagged_latlongs": [
+      [
+        51.50119,
+        -0.16274
+      ]
+    ],
+    "prediction": [
+      "10_R_10899",
+      "10_R_7130",
+      "10_R_4204"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi there, Myself and boyfriend are coming to New York on a Friday landing at JFK at 4pm then flight leaves sunday at 5pm. I would like to try and make the most of the shopping whilst I am there- suggestions? Clothes and electronics really. Also, any good restaurants and bars for the friday and saturday night. I am staying at Hotel Metro. What is the best way to get to the hotel from the airport and which is better- ESB/TOTR ? Thanks",
+    "answer_entity_id": "0_R_11839",
+    "all_answer_entity_list": [
+      "0_R_11255",
+      "0_R_11373",
+      "0_R_11839",
+      "0_R_12033"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_12168",
+      "0_R_7775",
+      "0_R_9141"
+    ],
+    "human_eval_top3_hit": ["0_R_12168"]
+  },
+  {
+    "question": "I live about 20 minutes on the train out of the city and was trying to think of a great place to take my brother for his 30th. Was trying to think of somewhere a bit swish. I know he wants to check out The Ivy. . . anyone been? Or does anyone know of any amazing restaurants that would be really impressive? Also, will be spending the day in the city, any suggestions of what to do before dinner (apart from a show)?",
+    "answer_entity_id": "10_R_17034",
+    "all_answer_entity_list": [
+      "10_R_17034"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "10_R_18284",
+      "10_R_12190",
+      "10_R_13306"
+    ],
+    "human_eval_top3_hit": ["10_R_18284"]
+  },
+  {
+    "question": "Just want to know what is the best MAC store to go to. And any good tips on other good make-up stores would be great too. Thanks, Michelle.",
+    "answer_entity_id": "0_A_2950",
+    "all_answer_entity_list": [
+      "0_A_2950"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_A_2950",
+      "0_A_2005",
+      "0_A_2885"
+    ],
+    "human_eval_top3_hit": [
+      "0_A_2950"
+    ]
+  },
+  {
+    "question": "Hi My wife and I are visiting New York just before Christmas to celebrate our 10th anniversary. We will be staying at Morgans Hotel on Madison Ave. Our return flight to the UK leaves JFK at 9. 30 pm but I would like to take my wife for a special lunch on the last Thursday before Christmas. Where would you suggest? We are not particularly keen on italian and although we both eat fish, we prefer meat so probably wouldn't choose a seafood only restaurant. Budget wise - a maximum of $250 ish in total. Dress-code - as we are flying back the same evening I would prefer not to need a jacket, however I could bring it for a really special place. Many Thanks",
+    "answer_entity_id": "0_R_12376",
+    "all_answer_entity_list": [
+      "0_R_11778",
+      "0_R_12376",
+      "0_R_12403"
+    ],
+    "tagged_latlongs": [
+      [
+        40.74980545043945,
+        -73.98119354248047
+      ],
+      [
+        40.7664050002185,
+        -73.9693550010665
+      ]
+    ],
+    "prediction": [
+      "0_R_12400",
+      "0_R_12383",
+      "0_R_12042"
+    ],
+    "human_eval_top3_hit": ["0_R_12400"]
+  },
+  {
+    "question": "Hi, I'll be in NYC at the start of Oct with my mum and sisters. I'd like to book a good restaurant to celebrate my mum's birthday, it doesn't have to be too fancy however we'd like somewhere with good food and decent service - I'd like to be able to pre-arrange champagne/birthday cake etc so somewhere that would be open to this and to make my mum's birthday special - if that's not asking too much. Location wise - I'm not sure as we'll be getting taxis anyway (but we're staying mid-town area). Thanks in advance xx",
+    "answer_entity_id": "0_R_12362",
+    "all_answer_entity_list": [
+      "0_R_12362",
+      "0_R_12400"
+    ],
+    "tagged_latlongs": [
+      [
+        40.72845,
+        -74.17063
+      ]
+    ],
+    "prediction": [
+      "0_R_12400",
+      "0_R_3077",
+      "0_R_12326"
+    ],
+    "human_eval_top3_hit": [
+      "0_R_12400"
+    ]
+  },
+  {
+    "question": "Hi, We are planning our first trip with kids (10, 5, 1). The main focus would be museums (mostly Smithsonian's) and the Cherry Blossom festival. Are there places in that area where we could have lunch / dinner? We need something kids friendly, not fancy and not expensive. Thanks!",
+    "answer_entity_id": "1_R_2397",
+    "all_answer_entity_list": [
+      "1_R_2397"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_R_4943",
+      "1_R_2399",
+      "1_R_3010"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hi, my family of four adults will be arriving in London next Friday evening. We are looking forward to our first visit to England. I have a couple of questions about the seven day travel card photo. Is it possible to just photo copy my passport photo and use that photo for the travel card or do I need to have an actual photo made before I arrive in London? Does the size of the photo make a difference? Our hotel is on Euston Road across from the British Library and I would appreciate any recommendations one might have concerning restaurants, pubs, etc. that we should try, including breakfast. Also in that area are there any grocery or drugstores conveniently close? I am assuming the Kings Cross St Pancras underground station is the one we should use. One last question concerns the walk up the hill to the Royal Observatory, how steep is it really? My daughter is concerned that her senior citizen Mom might have some difficulty but I think I can do it. Thanks for your help.",
+    "answer_entity_id": "10_R_21112",
+    "all_answer_entity_list": [
+      "10_R_16144",
+      "10_R_18449",
+      "10_R_21112"
+    ],
+    "tagged_latlongs": [
+      [
+        51.53022384643555,
+        -0.12723000347614288
+      ],
+      [
+        51.4777717590332,
+        -0.0009200000204145908
+      ],
+      [
+        51.53001,
+        -0.11625
+      ],
+      [
+        51.526161193847656,
+        -0.13437999784946442
+      ]
+    ],
+    "prediction": [
+      "10_R_16461",
+      "10_R_20676",
+      "10_R_4376"
+    ],
+    "human_eval_top3_hit": ["1_R_3010"]
+  },
+  {
+    "question": "Hi, Am planning a trip to Vancouver and was looking at this hotel. Could not find any reviews on the net except for one on this site, so was wondering if anyone has any idea of this hotel, and the locality in general. I'm not looking for a fancy place, just something that's reasonable and safe. . . basically a comfortable bed to sleep in at night, not too far from downtown. If not this, any other hotels you would recommend? Thanks so much! - JK",
+    "answer_entity_id": "6_H_153670",
+    "all_answer_entity_list": [
+      "6_H_153670",
+      "6_H_19093"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "6_H_18212",
+      "6_H_19248",
+      "6_H_18097"
+    ],
+    "human_eval_top3_hit": ["6_H_18212"]
+  },
+  {
+    "question": "Please help! I've posted before about wanting a hotel for our honeymoon around 20 Dec 07 - 3 Jan 08 but the more I look a hotels the more confused I get. Neither I or my fiance have been to NY before so we want something pretty central and ideally 4-5 star. If at all possible we would also like something \"better\" than a standard room and as luxurious as possible. So far we have looked at and liked the look of. . . Michelangelo Sofitel The Palace Berkley Benjamin Jumeirah Essex House thats all I can think of at the minute. Would anyone recommend any of these over the others? Also possibly a combintaion of a couple so we could do a week at one and a week at another? Thanks so much",
+    "answer_entity_id": "0_H_99094",
+    "all_answer_entity_list": [
+      "0_H_99094",
+      "0_H_99112"
+    ],
+    "tagged_latlongs": [
+      [
+        40.766387939453125,
+        -73.9786148071289
+      ]
+    ],
+    "prediction": [
+      "0_H_98741",
+      "0_H_98949",
+      "0_H_99066"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hello: Very last minute, I've booked a trip to DC for the National Equality March this wknd. woot! My return flight is out of IAD at 7am. I'm looking at options for getting there and it doesn't seem like the Washington Flyer nor the Metro will be running early enough to get me there. I'm staying at the Washington Marriott Wardman Park. Any suggestions? Am I reading these schedules right? The tripadvisor article about Dulles makes me panic. It suggests arriving 4 hours prior to the flight. Really? Arrive at the airport at 3am for a 7am flight? Yowza! No wonder that flight still had cheap seats. Also, any good vegan places around my hotel? I recently went to Portland, OR and had a great time using the forum for advice, etc. Thanks in advance for making this trip just as easy. :)",
+    "answer_entity_id": "1_R_2402",
+    "all_answer_entity_list": [
+      "1_R_2402",
+      "1_R_3598"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "1_R_2970",
+      "1_R_4421",
+      "1_R_2399"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "I would appreciate your help with figuring out the most convenient way to get from the airport to The Union League Club at 65 W. Jackson where we are staying for two nights. We are scheduled to arrive on domestic flight in Chicago at 11:45 AM Our return flight departs from ORD at 7:40 AM. What time do you suggest we get to the airport and what time should we leave our hotel? We think the best and quickest way to get to the airport early in the morning on weekday would be to take a taxi. Am I right? How much taxi drivers in Chicago expect to be tipped? Our hotel is located on 65 W. Jackson. Is there any place around for breakfasts and another place for a dinner withing walking distance? We have tickets for Tutankhamun exibition in the Field Museum for 9 AM. Is it possible to walk there from the hotel? We have a meeting at noon in LaSalle Bank. Is the bank within walking distance from the Field Museum or should we take a taxi? Thank you",
+    "answer_entity_id": "2_R_10008",
+    "all_answer_entity_list": [
+      "2_R_10008",
+      "2_R_2549"
+    ],
+    "tagged_latlongs": [
+      [
+        41.877931,
+        -87.629866
+      ],
+      [
+        41.877931,
+        -87.629866
+      ],
+      [
+        41.866390228271484,
+        -87.61683654785156
+      ],
+      [
+        41.866390228271484,
+        -87.61683654785156
+      ]
+    ],
+    "prediction": [
+      "2_R_10211",
+      "2_R_10085",
+      "2_R_8009"
+    ],
+    "human_eval_top3_hit": ["2_R_10211"]
+  },
+  {
+    "question": "Hi, My partner and I had hoped to have dinner at The River Caf\u00e9 while we\u2019re in New York in a few weeks, but unfortunately it doesn\u2019t look as if it\u2019ll be open by the time we\u2019re there. Can anyone recommend another good restaurant with a view of the Brooklyn Bridge? Budget-wise, we had thought about $400 for The River Caf\u00e9, as it was to be our \u201chighlight\u201d dinner. Cuisine-wise, we like pretty much all types of food, so would definitely be open to suggestions. As always, any advice would be much appreciated! Thanks",
+    "answer_entity_id": "0_R_3048",
+    "all_answer_entity_list": [
+      "0_R_12326",
+      "0_R_12362",
+      "0_R_12376",
+      "0_R_12383",
+      "0_R_12400",
+      "0_R_3048",
+      "0_R_3091"
+    ],
+    "tagged_latlongs": [
+      [
+        40.70764923095703,
+        -73.99890899658203
+      ]
+    ],
+    "prediction": [
+      "0_R_12265",
+      "0_R_12400",
+      "0_R_12001"
+    ],
+    "human_eval_top3_hit": [
+      "0_R_12400"
+    ]
+  },
+  {
+    "question": "Can anybody tell me what is regarded as the best italian restaurant in nyc anywhere in the general midtown or downtown area. Myself and my girlfriend are staying in Tribeca at Canal St but will travel. We am looking for a good quality romantic italian restaurant. Price doesn't matter. Thanks, Alan",
+    "answer_entity_id": "0_R_3099",
+    "all_answer_entity_list": [
+      "0_R_11193",
+      "0_R_11770",
+      "0_R_11993",
+      "0_R_12042",
+      "0_R_12147",
+      "0_R_12193",
+      "0_R_12365",
+      "0_R_3099"
+    ],
+    "tagged_latlongs": [
+      [
+        40.7211050234941,
+        -74.0042849699416
+      ]
+    ],
+    "prediction": [
+      "0_R_12009",
+      "0_R_11893",
+      "0_R_11993"
+    ],
+    "human_eval_top3_hit": [
+      "0_R_11993"
+    ]
+  },
+  {
+    "question": "I ionwill be travelling to New York this weekend with a group of six. We have dinner reservations one night at Gotham Bar and Grill and, at the recommendation of a friend, had planned to go to the Highline Standard Hotel beforehand for a drink. I had also noticed several mentions of the Gansevoort Hotel as a good spot for the same purpose. Does this plan make sense-we will be staying at the Elysee-and would you recommend one over the other ( or both! ). Thanks",
+    "answer_entity_id": "0_R_12400",
+    "all_answer_entity_list": [
+      "0_R_11621",
+      "0_R_12103",
+      "0_R_12224",
+      "0_R_12400",
+      "0_R_9135"
+    ],
+    "tagged_latlongs": [
+      [
+        40.59047,
+        -73.92624
+      ]
+    ],
+    "prediction": [
+      "0_R_8768",
+      "0_R_12270",
+      "0_R_12221"
+    ],
+    "human_eval_top3_hit": ["0_R_12270"]
+  },
+  {
+    "question": "I am going to be in NYC during NYC Restaurant Week! I am a massive food lover, and I was wondering whether there were any restaurants participating in Restaurant Week that TripAdvisor reviewers would recommend? I would love to try some really lovely restaurants that would maybe be out of my budget if they were not participating in restaurant week! Thanks in advance!",
+    "answer_entity_id": "0_R_12303",
+    "all_answer_entity_list": [
+      "0_R_11224",
+      "0_R_11951",
+      "0_R_11993",
+      "0_R_12048",
+      "0_R_12198",
+      "0_R_12224",
+      "0_R_12303",
+      "0_R_12307"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_R_3077",
+      "0_R_12400",
+      "0_R_12404"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "We are two 60 + year old women arriving in mitte on a Sunday late afternoon. We will start doing our ' serious touring ' the next day but would appreciate some ideas on what to do from 5 ish that first evening. Fun places to walk to, have a drink and a bite to eat. . Somewhere to start to get a feel of Berlin. Thanks",
+    "answer_entity_id": "18_R_2822",
+    "all_answer_entity_list": [
+      "18_R_2822"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "18_R_4130",
+      "18_R_9513",
+      "18_R_7957"
+    ],
+    "human_eval_top3_hit": ["18_R_4130"]
+  },
+  {
+    "question": "can anybody suggest a good budget eatery for lunch and dinner in agra and jaipur?",
+    "answer_entity_id": "26_R_2335",
+    "all_answer_entity_list": [
+      "26_R_2335"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "26_R_2335",
+      "26_R_2319",
+      "26_R_2333"
+    ],
+    "human_eval_top3_hit": [
+      "26_R_2335"
+    ]
+  },
+  {
+    "question": "I am hosting a retirement dinner celebration for my husband on Dec 3rd and am holding reservations at Coco Pazzo and Il Mulino for 8 people. We are staying at the new Public Hotel (we could not get dinner reservations at Pump Room). Which restaurant will provide the best initimate, fun, special night with great food of course? We will also be looking for a fun nightclub to hear music/dancing after dinner if you have any recommendations. . . for middle aged, but fun people :)",
+    "answer_entity_id": "2_R_2625",
+    "all_answer_entity_list": [
+      "2_R_2625"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "2_R_2556",
+      "2_R_10082",
+      "2_R_10168"
+    ],
+    "human_eval_top3_hit": ["2_R_2556"]
+  },
+  {
+    "question": "We are coming to the theatre in October for my birthday and wish to go for a meal within walking distance from Euston station in the evening before taking the train home. We would like a nice cosy pub with a separate area for eating, and want nice home cooked food, like a pie and chunky chips or a hamburger. Price no object but don't want gastro food, just a nice big plateful, and not a microwave/chain restaurant type of meal. Any recommendations?",
+    "answer_entity_id": "10_R_16950",
+    "all_answer_entity_list": [
+      "10_R_16950",
+      "10_R_20507"
+    ],
+    "tagged_latlongs": [
+      [
+        51.52760696411133,
+        -0.13246099650859833
+      ]
+    ],
+    "prediction": [
+      "10_R_16461",
+      "10_R_20676",
+      "10_R_20162"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "Hello! Does anyone have any recommendations on where to stay in NYC for 5 people that is close to nightlife, restaurants, shopping?",
+    "answer_entity_id": "0_H_98754",
+    "all_answer_entity_list": [
+      "0_H_98754"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_H_98741",
+      "0_H_98949",
+      "0_H_98951"
+    ],
+    "human_eval_top3_hit": ["0_H_98741"]
+  },
+  {
+    "question": "We(mom, dad and 3 teenagers) are planning a trip to NYC. This is our first time and I have done searches on the forum for hotels that have suites. Are there others besides Embasy or Doubletree? I am hoping to get a suite instead of 2 rooms. I was hoping to spend under $300 but maybe that's unreasonable-is it? Also is it usually cheaper to stay on the weekend? I'm used to Vegas where the rates are much higher on the weekend but when I checked some rates for NYC, it seemed just the opposite. Thanks for any help.",
+    "answer_entity_id": "0_H_98741",
+    "all_answer_entity_list": [
+      "0_H_98741"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "0_H_98741",
+      "0_H_98949",
+      "0_H_98951"
+    ],
+    "human_eval_top3_hit": [
+      "0_H_98741"
+    ]
+  },
+  {
+    "question": "We are staying at the Hotel St Paul in March 2015, is this area good for local restaurants and bars? . I speak a little Italian so prefer to go where the locals go rather than the tourist trap joints, that I expect will be found near the main tourist areas. Can anyone reccomend also where to eat reasonably around the main tourist areas",
+    "answer_entity_id": "13_R_13276",
+    "all_answer_entity_list": [
+      "13_R_13276"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "13_R_8849",
+      "13_R_3753",
+      "13_R_5094"
+    ],
+    "human_eval_top3_hit": []
+  },
+  {
+    "question": "we are going to amsterdam in may,11 of us ,i was wondering if anyone can advize us where the pubs are that serve cheap beer or names of bars with happy hours as we have heard that it is now 6 euros for a pint",
+    "answer_entity_id": "22_R_5567",
+    "all_answer_entity_list": [
+      "22_R_2714",
+      "22_R_3935",
+      "22_R_5567"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "22_R_2714",
+      "22_R_5418",
+      "22_R_3935"
+    ],
+    "human_eval_top3_hit": [
+      "22_R_3935"
+    ]
+  },
+  {
+    "question": "Hi, will be on a Europe trip next June visiting several cities. Ill be posting the same question in the other relevant forums also. And that question is. . . What is the best National dish of Vienna to eat and the best place to get it. Thanks in advance Andrew",
+    "answer_entity_id": "17_R_6194",
+    "all_answer_entity_list": [
+      "17_R_6194"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "17_R_6135",
+      "17_R_6157",
+      "17_R_4746"
+    ],
+    "human_eval_top3_hit": ["17_R_6135"]
+  },
+  {
+    "question": "We are staying at The Lucerne at 79th and Amsterdam. Any suggestions for lunch? I'm sure we could stumble into a number of places but would hate to miss something special.",
+    "answer_entity_id": "0_R_3345",
+    "all_answer_entity_list": [
+      "0_R_10897",
+      "0_R_11676",
+      "0_R_12326",
+      "0_R_3345"
+    ],
+    "tagged_latlongs": [
+      [
+        40.7799950000182,
+        -73.971084999956
+      ]
+    ],
+    "prediction": [
+      "0_R_12400",
+      "0_R_12001",
+      "0_R_12326"
+    ],
+    "human_eval_top3_hit": [
+      "0_R_12326"
+    ]
+  },
+  {
+    "question": "I'm looking for a good restaurant to book for new years eve - fairly lively, friendly, good food, reasonable prices (I know everywhere will have inflated prices for new year). Type of food unimportant. Ideas welcome",
+    "answer_entity_id": "8_R_3099",
+    "all_answer_entity_list": [
+      "8_R_3099"
+    ],
+    "tagged_latlongs": [],
+    "prediction": [
+      "8_R_2739",
+      "8_R_6968",
+      "8_R_7055"
+    ],
+    "human_eval_top3_hit": ["8_R_2739"]
+  },
+  {
+    "question": "I wonder if anyone has any suggestions of somewhere nice but not too pricey to eat around the West End, Covent Garden, Oxford St areas for an early dinner. Every time we go we end up in a Pizza Hut so something different would be nice! Thank you.",
+    "answer_entity_id": "10_R_14470",
+    "all_answer_entity_list": [
+      "10_R_14470"
+    ],
+    "tagged_latlongs": [
+      [
+        51.51544189453125,
+        -0.12692999839782715
+      ],
+      [
+        51.51433,
+        -0.14962
+      ],
+      [
+        51.5781,
+        0.03084
+      ]
+    ],
+    "prediction": [
+      "10_R_10899",
+      "10_R_4204",
+      "10_R_12190"
+    ],
+    "human_eval_top3_hit": ["10_R_12190"]
+  }
+]

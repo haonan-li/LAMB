@@ -1,0 +1,402 @@
+[
+  {
+    "location": {
+      "lat": 40.7127753,
+      "lng": -74.0059728
+    },
+    "city_name": "New York",
+    "city_id": 0
+  },
+  {
+    "location": {
+      "lat": 47.7510741,
+      "lng": -120.7401385
+    },
+    "city_name": "Washington",
+    "city_id": 1
+  },
+  {
+    "location": {
+      "lat": 41.8781136,
+      "lng": -87.6297982
+    },
+    "city_name": "Chicago",
+    "city_id": 2
+  },
+  {
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "city_name": "San Francisco",
+    "city_id": 3
+  },
+  {
+    "location": {
+      "lat": 19.4326077,
+      "lng": -99.133208
+    },
+    "city_name": "Mexico City",
+    "city_id": 4
+  },
+  {
+    "location": {
+      "lat": 25.7616798,
+      "lng": -80.1917902
+    },
+    "city_name": "Miami",
+    "city_id": 5
+  },
+  {
+    "location": {
+      "lat": 49.2827291,
+      "lng": -123.1207375
+    },
+    "city_name": "Vancouver",
+    "city_id": 6
+  },
+  {
+    "location": {
+      "lat": -23.5505199,
+      "lng": -46.63330939999999
+    },
+    "city_name": "Sao Paulo",
+    "city_id": 7
+  },
+  {
+    "location": {
+      "lat": -34.6036844,
+      "lng": -58.3815591
+    },
+    "city_name": "Buenos Aires",
+    "city_id": 8
+  },
+  {
+    "location": {
+      "lat": -22.9068467,
+      "lng": -43.1728965
+    },
+    "city_name": "Rio De Janeiro",
+    "city_id": 9
+  },
+  {
+    "location": {
+      "lat": 51.5073509,
+      "lng": -0.1277583
+    },
+    "city_name": "London",
+    "city_id": 10
+  },
+  {
+    "location": {
+      "lat": 53.3498053,
+      "lng": -6.2603097
+    },
+    "city_name": "Dublin",
+    "city_id": 11
+  },
+  {
+    "location": {
+      "lat": 48.856614,
+      "lng": 2.3522219
+    },
+    "city_name": "Paris",
+    "city_id": 12
+  },
+  {
+    "location": {
+      "lat": 41.9027835,
+      "lng": 12.4963655
+    },
+    "city_name": "Rome",
+    "city_id": 13
+  },
+  {
+    "location": {
+      "lat": 59.32932349999999,
+      "lng": 18.0685808
+    },
+    "city_name": "Stockholm",
+    "city_id": 14
+  },
+  {
+    "location": {
+      "lat": 59.9138688,
+      "lng": 10.7522454
+    },
+    "city_name": "Oslo",
+    "city_id": 15
+  },
+  {
+    "location": {
+      "lat": 47.3768866,
+      "lng": 8.541694
+    },
+    "city_name": "Zurich",
+    "city_id": 16
+  },
+  {
+    "location": {
+      "lat": 48.2081743,
+      "lng": 16.3738189
+    },
+    "city_name": "Vienna",
+    "city_id": 17
+  },
+  {
+    "location": {
+      "lat": 52.52000659999999,
+      "lng": 13.404954
+    },
+    "city_name": "Berlin",
+    "city_id": 18
+  },
+  {
+    "location": {
+      "lat": 47.497912,
+      "lng": 19.040235
+    },
+    "city_name": "Budapest",
+    "city_id": 19
+  },
+  {
+    "location": {
+      "lat": 44.4267674,
+      "lng": 26.1025384
+    },
+    "city_name": "Bucharest",
+    "city_id": 20
+  },
+  {
+    "location": {
+      "lat": 55.755826,
+      "lng": 37.6172999
+    },
+    "city_name": "Moscow",
+    "city_id": 21
+  },
+  {
+    "location": {
+      "lat": 52.3666969,
+      "lng": 4.8945398
+    },
+    "city_name": "Amsterdam",
+    "city_id": 22
+  },
+  {
+    "location": {
+      "lat": 39.90419989999999,
+      "lng": 116.4073963
+    },
+    "city_name": "Beijing",
+    "city_id": 23
+  },
+  {
+    "location": {
+      "lat": 28.6139391,
+      "lng": 77.2090212
+    },
+    "city_name": "New Delhi",
+    "city_id": 24
+  },
+  {
+    "location": {
+      "lat": 19.0759837,
+      "lng": 72.8776559
+    },
+    "city_name": "Mumbai",
+    "city_id": 25
+  },
+  {
+    "location": {
+      "lat": 27.1766701,
+      "lng": 78.00807449999999
+    },
+    "city_name": "Agra",
+    "city_id": 26
+  },
+  {
+    "location": {
+      "lat": 13.7563309,
+      "lng": 100.5017651
+    },
+    "city_name": "Bangkok",
+    "city_id": 27
+  },
+  {
+    "location": {
+      "lat": 24.8607343,
+      "lng": 67.0011364
+    },
+    "city_name": "Karachi",
+    "city_id": 28
+  },
+  {
+    "location": {
+      "lat": 1.352083,
+      "lng": 103.819836
+    },
+    "city_name": "Singapore",
+    "city_id": 29
+  },
+  {
+    "location": {
+      "lat": -6.2087634,
+      "lng": 106.845599
+    },
+    "city_name": "Jakarta",
+    "city_id": 30
+  },
+  {
+    "location": {
+      "lat": 35.6761919,
+      "lng": 139.6503106
+    },
+    "city_name": "Tokyo",
+    "city_id": 31
+  },
+  {
+    "location": {
+      "lat": 37.566535,
+      "lng": 126.9779692
+    },
+    "city_name": "Seoul",
+    "city_id": 32
+  },
+  {
+    "location": {
+      "lat": 28.5970573,
+      "lng": 77.17364169999999
+    },
+    "city_name": "Bukhara",
+    "city_id": 33
+  },
+  {
+    "location": {
+      "lat": 47.88639879999999,
+      "lng": 106.9057439
+    },
+    "city_name": "Ulaanbaatar",
+    "city_id": 34
+  },
+  {
+    "location": {
+      "lat": 27.7172453,
+      "lng": 85.3239605
+    },
+    "city_name": "Kathmandu",
+    "city_id": 35
+  },
+  {
+    "location": {
+      "lat": -37.8136276,
+      "lng": 144.9630576
+    },
+    "city_name": "Melbourne",
+    "city_id": 36
+  },
+  {
+    "location": {
+      "lat": -33.8688197,
+      "lng": 151.2092955
+    },
+    "city_name": "Sydney",
+    "city_id": 37
+  },
+  {
+    "location": {
+      "lat": -36.8484597,
+      "lng": 174.7633315
+    },
+    "city_name": "Auckland",
+    "city_id": 38
+  },
+  {
+    "location": {
+      "lat": 23.1135925,
+      "lng": -82.3665956
+    },
+    "city_name": "Havana",
+    "city_id": 39
+  },
+  {
+    "location": {
+      "lat": 21.3069444,
+      "lng": -157.8583333
+    },
+    "city_name": "Honolulu",
+    "city_id": 40
+  },
+  {
+    "location": {
+      "lat": 28.5490908,
+      "lng": 77.25295299999999
+    },
+    "city_name": "Kingston",
+    "city_id": 41
+  },
+  {
+    "location": {
+      "lat": -4.679574,
+      "lng": 55.491977
+    },
+    "city_name": "Seychelles",
+    "city_id": 42
+  },
+  {
+    "location": {
+      "lat": 25.2048493,
+      "lng": 55.2707828
+    },
+    "city_name": "Dubai",
+    "city_id": 43
+  },
+  {
+    "location": {
+      "lat": 30.0444196,
+      "lng": 31.2357116
+    },
+    "city_name": "Cairo",
+    "city_id": 44
+  },
+  {
+    "location": {
+      "lat": 31.9539494,
+      "lng": 35.910635
+    },
+    "city_name": "Amman",
+    "city_id": 45
+  },
+  {
+    "location": {
+      "lat": 31.768319,
+      "lng": 35.21371
+    },
+    "city_name": "Jerusalem",
+    "city_id": 46
+  },
+  {
+    "location": {
+      "lat": -26.2041028,
+      "lng": 28.0473051
+    },
+    "city_name": "Johannesburg",
+    "city_id": 47
+  },
+  {
+    "location": {
+      "lat": -33.9248685,
+      "lng": 18.4240553
+    },
+    "city_name": "Cape Town",
+    "city_id": 48
+  },
+  {
+    "location": {
+      "lat": -1.2920659,
+      "lng": 36.8219462
+    },
+    "city_name": "Nairobi",
+    "city_id": 49
+  }
+]
