@@ -253,7 +253,7 @@ def main():
     # other
     parser.add_argument("--use_wandb", action="store_true")
     parser.add_argument('--output_dir', type=str, default="output")
-    parser.add_argument('--data_dir', type=str, default="/Users/haonanl5/Downloads/tourqa/data/")
+    parser.add_argument('--data_dir', type=str, default="../data/")
     parser.add_argument('--test_file', type=str, default="test.json")
     parser.add_argument('--train_file', type=str, default="train.json")
     parser.add_argument('--valid_file', type=str, default="valid.json")
