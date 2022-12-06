@@ -106,7 +106,6 @@ class Lamb(nn.Module):
         self.samples_per_qa = options.samples_per_qa
         self.max_loc = self.opts.max_locations
         self.dropout = nn.Dropout(0.2)
-        self.hidden_dim = 768
         self.encoder_output_dim = self.opts.encoder_output_dim
         self.relu = nn.ReLU()
 
@@ -116,6 +115,7 @@ class Lamb(nn.Module):
             self.output_dim = self.encoder_output_dim
 
         self.transformer_config = AutoConfig.from_pretrained(self.opts.transformer_model)
+        self.hidden_dim = self.transformer_config.hidden_size
 
         # textual encoder
         if self.opts.debug: # create a simple model for debugging
