@@ -232,7 +232,8 @@ def main():
     parser.add_argument("--hard_negatives_per_qa", type=int, default=8)
     parser.add_argument("--score_method", type=str, default="dot", choices=['dot','cosine'])
     # textual module
-    parser.add_argument("--transformer_model", type=str, default='distilbert-base-uncased')
+    parser.add_argument("--q_encoder", type=str, default='distilbert-base-uncased')
+    parser.add_argument("--e_encoder", type=str, default='distilbert-base-uncased')
     parser.add_argument("--max_question_length", type=int, default=384)
     parser.add_argument("--max_entity_length", type=int, default=512)
     parser.add_argument("--n_cluster_reviews", type=int, default=0)
@@ -269,7 +270,8 @@ def main():
     print(str(opts))
 
     os.makedirs(opts.output_dir, exist_ok=True)
-    opts.prefix = f'LOG_sp_{opts.samples_per_qa}_hsp_{opts.hard_negatives_per_qa}_bz_{opts.batch_size*opts.gradient_accumulation_steps}_lr_{opts.lr}_epochs_{opts.num_train_epochs}_s2_{opts.s2_after}_score_{opts.score_method}_loss_{opts.loss}_name_{opts.encode_entity_name}_loc_{opts.location}_maxloc_{opts.max_locations}_dist_{opts.distance}_dw_{opts.dist_weight}_haversine_{opts.haversine_distance}_seed_{opts.seed}_cluster_{opts.n_cluster_reviews}_trainfile_{opts.train_file}_testfile_{opts.test_file}_{opts.transformer_model.split("/")[-1]}_'
+    opts.prefix = \
+    f'LOG_sp_{opts.samples_per_qa}_hsp_{opts.hard_negatives_per_qa}_bz_{opts.batch_size*opts.gradient_accumulation_steps}_lr_{opts.lr}_epochs_{opts.num_train_epochs}_s2_{opts.s2_after}_score_{opts.score_method}_loss_{opts.loss}_name_{opts.encode_entity_name}_loc_{opts.location}_maxloc_{opts.max_locations}_dist_{opts.distance}_dw_{opts.dist_weight}_haversine_{opts.haversine_distance}_seed_{opts.seed}_cluster_{opts.n_cluster_reviews}_trainfile_{opts.train_file}_testfile_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_'
     opts.id_file = opts.prefix + opts.id_file
     opts.emb_file = opts.prefix + opts.emb_file
 

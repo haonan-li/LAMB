@@ -114,27 +114,40 @@ class Lamb(nn.Module):
         else:
             self.output_dim = self.encoder_output_dim
 
-        if self.opts.transformer_model == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
-            self.transformer_config = AutoConfig.from_pretrained('distilbert-base-uncased')
-            self.hidden_dim = self.transformer_config.compression_dim
-        if self.opts.transformer_model == 'huawei-noah/TinyBERT_General_4L_312D':
-            self.transformer_config = AutoConfig.from_pretrained('bert-base-uncased')
-            self.hidden_dim = self.transformer_config.hidden_size
+        # q_encoder init
+        if self.opts.q_encoder == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
+            self.q_config = AutoConfig.from_pretrained('distilbert-base-uncased')
+            self.q_hidden_dim = self.q_config.compression_dim
+        if self.opts.q_encoder == 'huawei-noah/TinyBERT_General_4L_312D':
+            self.q_config = AutoConfig.from_pretrained('bert-base-uncased')
+            self.q_hidden_dim = self.q_config.hidden_size
         else:
-            self.transformer_config = AutoConfig.from_pretrained(self.opts.transformer_model)
-            self.hidden_dim = self.transformer_config.hidden_size
+            self.q_config = AutoConfig.from_pretrained(self.opts.q_encoder)
+            self.q_hidden_dim = self.q_config.hidden_size
+
+
+        # e_encoder init
+        if self.opts.e_encoder == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
+            self.e_config = AutoConfig.from_pretrained('distilbert-base-uncased')
+            self.e_hidden_dim = self.e_config.compression_dim
+        if self.opts.e_encoder == 'huawei-noah/TinyBERT_General_4L_312D':
+            self.e_config = AutoConfig.from_pretrained('bert-base-uncased')
+            self.e_hidden_dim = self.e_config.hidden_size
+        else:
+            self.e_config = AutoConfig.from_pretrained(self.opts.e_encoder)
+            self.e_hidden_dim = self.e_config.hidden_size
 
         # textual encoder
         if self.opts.debug: # create a simple model for debugging
             self.question_encoder = lambda input_ids, token_type_ids=None, attention_mask=None: (torch.randn((input_ids.size(0), 1, self.hidden_dim)).to(self.opts.device), 0)
             self.entity_encoder = lambda input_ids, token_type_ids=None, attention_mask=None: (torch.randn((input_ids.size(0), 1, self.hidden_dim)).to(self.opts.device), 0)
         else:
-            self.question_encoder = AutoModel.from_pretrained(self.opts.transformer_model, from_tf=False, config=self.transformer_config)
-            self.entity_encoder = AutoModel.from_pretrained(self.opts.transformer_model, from_tf=False, config=self.transformer_config)
+            self.question_encoder = AutoModel.from_pretrained(self.opts.q_encoder, from_tf=False, config=self.q_config)
+            self.entity_encoder = AutoModel.from_pretrained(self.opts.e_encoder, from_tf=False, config=self.e_config)
 
         # output layer
-        self.question_output_layer = nn.Linear(self.hidden_dim, self.encoder_output_dim)
-        self.entity_output_layer = nn.Linear(self.hidden_dim, self.encoder_output_dim)
+        self.question_output_layer = nn.Linear(self.q_hidden_dim, self.encoder_output_dim)
+        self.entity_output_layer = nn.Linear(self.e_hidden_dim, self.encoder_output_dim)
 
         # fuse layer
         self.question_fuse_layer = nn.Linear(self.output_dim, self.output_dim)

@@ -32,7 +32,8 @@ class Lamb_Data:
         self.load_raw_review()
         self.load_city_coordinate()
 
-        self.transformer_tokenizer = AutoTokenizer.from_pretrained(self.opts.transformer_model, use_fast=True)
+        self.q_tokenizer = AutoTokenizer.from_pretrained(self.opts.q_encoder, use_fast=True)
+        self.e_tokenizer = AutoTokenizer.from_pretrained(self.opts.e_encoder, use_fast=True)
         self.cached_questions = {}
 
         self.preprocess_all_entities()
@@ -182,7 +183,7 @@ class Lamb_Data:
                 result = self.cached_questions[example['question']]
             else:
                 texts = ((example['question'],))
-                result = self.transformer_tokenizer(*texts, padding="max_length", max_length=self.opts.max_question_length, truncation=True)
+                result = self.q_tokenizer(*texts, padding="max_length", max_length=self.opts.max_question_length, truncation=True)
                 if self.opts.location or self.opts.distance:
                     result['latlongs'], result['latlong_mask'] = self.pad_locations(example['tagged_latlongs'])
                 self.cached_questions[example['question']] = result
@@ -233,7 +234,7 @@ class Lamb_Data:
             texts = ((examples['name'], examples['review']))
         else:
             texts = ((examples['review'],))
-        result = self.transformer_tokenizer(*texts, padding='max_length', max_length=self.opts.max_entity_length, truncation=True)
+        result = self.e_tokenizer(*texts, padding='max_length', max_length=self.opts.max_entity_length, truncation=True)
         return result
 
 
