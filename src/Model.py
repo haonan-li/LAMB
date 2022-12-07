@@ -118,9 +118,6 @@ class Lamb(nn.Module):
         if self.opts.q_encoder == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
             self.q_config = AutoConfig.from_pretrained('distilbert-base-uncased')
             self.q_hidden_dim = self.q_config.compression_dim
-        if self.opts.q_encoder == 'huawei-noah/TinyBERT_General_4L_312D':
-            self.q_config = AutoConfig.from_pretrained('bert-base-uncased')
-            self.q_hidden_dim = self.q_config.hidden_size
         else:
             self.q_config = AutoConfig.from_pretrained(self.opts.q_encoder)
             self.q_hidden_dim = self.q_config.hidden_size
@@ -130,9 +127,6 @@ class Lamb(nn.Module):
         if self.opts.e_encoder == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
             self.e_config = AutoConfig.from_pretrained('distilbert-base-uncased')
             self.e_hidden_dim = self.e_config.compression_dim
-        if self.opts.e_encoder == 'huawei-noah/TinyBERT_General_4L_312D':
-            self.e_config = AutoConfig.from_pretrained('bert-base-uncased')
-            self.e_hidden_dim = self.e_config.hidden_size
         else:
             self.e_config = AutoConfig.from_pretrained(self.opts.e_encoder)
             self.e_hidden_dim = self.e_config.hidden_size
