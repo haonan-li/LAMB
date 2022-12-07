@@ -114,8 +114,15 @@ class Lamb(nn.Module):
         else:
             self.output_dim = self.encoder_output_dim
 
-        self.transformer_config = AutoConfig.from_pretrained(self.opts.transformer_model)
-        self.hidden_dim = self.transformer_config.hidden_size
+        if self.opts.transformer_model == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
+            self.transformer_config = AutoConfig.from_pretrained('distilbert-base-uncased')
+            self.hidden_dim = self.transformer_config.compression_dim
+        if self.opts.transformer_model == 'huawei-noah/TinyBERT_General_4L_312D':
+            self.transformer_config = AutoConfig.from_pretrained('bert-base-uncased')
+            self.hidden_dim = self.transformer_config.hidden_size
+        else:
+            self.transformer_config = AutoConfig.from_pretrained(self.opts.transformer_model)
+            self.hidden_dim = self.transformer_config.hidden_size
 
         # textual encoder
         if self.opts.debug: # create a simple model for debugging
