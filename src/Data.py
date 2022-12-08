@@ -66,11 +66,12 @@ class Lamb_Data:
             n = self.opts.n_cluster_reviews if str(self.opts.n_cluster_reviews) in v['cluster_map'] else 3
             cluster = np.array(v['cluster_map'][str(n)])
             review = [np.array(v['review'])[cluster==i] for i in range(n)]
-            new_review = []
-            for i in zip_longest(*review):
-                for j in i:
-                    if j is not None:
-                        new_review.append(j)
+            new_review = review[0]
+            # new_review = []
+            # for i in zip_longest(*review):
+            #     for j in i:
+            #         if j is not None:
+            #             new_review.append(j)
             v['review'] = new_review
 
 
