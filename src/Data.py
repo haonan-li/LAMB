@@ -54,13 +54,17 @@ class Lamb_Data:
             self.entity2id = {entity:i for i,entity in enumerate(self.entity_ids)}
             self.id2entity = {i:entity for i,entity in enumerate(self.entity_ids)}
         print(f'Load entities knowledge total: {len(self.entity_knowledge)}.')
-        print(f'Reorder reviews.')
 
+        if self.opts.n_cluster_reviews == -1:
+            print(f'Keep reviews unchanged.')
+            return
         if self.opts.n_cluster_reviews == 0:
+            print(f'Shuffle reviews.')
             for k, v in tqdm(self.entity_knowledge.items()):
                 random.shuffle(v['review'])
             return
 
+        print(f'Reorder reviews according to cluster.')
         # reorder reviews by clustering
         for k, v in tqdm(self.entity_knowledge.items()):
             n = self.opts.n_cluster_reviews if str(self.opts.n_cluster_reviews) in v['cluster_map'] else 3
