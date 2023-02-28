@@ -270,8 +270,9 @@ def main():
     print(str(opts))
 
     os.makedirs(opts.output_dir, exist_ok=True)
+    import base64
     opts.prefix = \
-    f'LOG_sp_{opts.samples_per_qa}_hsp_{opts.hard_negatives_per_qa}_bz_{opts.batch_size*opts.gradient_accumulation_steps}_lr_{opts.lr}_epochs_{opts.num_train_epochs}_s2_{opts.s2_after}_score_{opts.score_method}_loss_{opts.loss}_name_{opts.encode_entity_name}_loc_{opts.location}_maxloc_{opts.max_locations}_dist_{opts.distance}_dw_{opts.dist_weight}_haversine_{opts.haversine_distance}_seed_{opts.seed}_cluster_{opts.n_cluster_reviews}_trainfile_{opts.train_file}_testfile_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_'
+    f'LOG_{opts.samples_per_qa}_{opts.hard_negatives_per_qa}_{opts.batch_size*opts.gradient_accumulation_steps}_{opts.lr}_{opts.num_train_epochs}_{opts.s2_after}_{opts.score_method}_{opts.loss}_{opts.encode_entity_name}_{opts.location}_{opts.max_locations}_{opts.distance}_{opts.dist_weight}_{opts.haversine_distance}_{opts.seed}_{opts.n_cluster_reviews}_{opts.train_file}_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_{opts.knowledge_file}_'
     opts.id_file = opts.prefix + opts.id_file
     opts.emb_file = opts.prefix + opts.emb_file
 
