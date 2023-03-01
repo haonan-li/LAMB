@@ -55,10 +55,10 @@ class Lamb_Data:
             self.id2entity = {i:entity for i,entity in enumerate(self.entity_ids)}
         print(f'Load entities knowledge total: {len(self.entity_knowledge)}.')
 
-        if self.opts.n_cluster_reviews == -1:
+        if self.opts.n_cluster_reviews == 0:
             print(f'Keep reviews unchanged.')
             return
-        if self.opts.n_cluster_reviews == 0:
+        if self.opts.n_cluster_reviews == 1:
             print(f'Shuffle reviews.')
             for k, v in tqdm(self.entity_knowledge.items()):
                 random.shuffle(v['review'])
