@@ -23,6 +23,54 @@ from transformers import (
 )
 
 
+class DistanceEncoder(nn.Module):
+    def __init__(self, options):
+        super(DistanceEncoder, self).__init__()
+        self.opts = options
+        self.max_loc = self.opts.max_locs
+        self.samples_per_qa = options.samples_per_qa
+        # self.dropout = nn.Dropout(0.1)
+        # self.fc1 = nn.Linear(self.max_loc, 2*self.max_loc)
+        # self.fc2 = nn.Linear(2*self.max_loc, 2*self.max_loc)
+        # self.fc3 = nn.Linear(2*self.max_loc, 1)
+
+    def forward(self, question_latlongs=None, question_latlong_mask=None, entity_latlongs=None, training=True):
+        max_loc = self.max_loc
+        B = question_latlong_mask.size(0)
+        if training:
+            sitr = self.samples_per_qa
+        else:
+            sitr = entity_latlongs.size(0)
+            entity_latlongs = entity_latlongs.unsqueeze(0).expand(B, sitr, 2)
+
+        dist = 2 * torch.ones((B, sitr, max_loc)).to(self.opts.device)
+        for i in range(B):
+            m = question_latlong_mask[i]    # (1, max_loc)
+            if not torch.any(m):    # no tagged latlong in q
+                continue
+            m = m.repeat(sitr,1)    # (sitr, max_loc)
+            q = question_latlongs[i] * torch.tensor([90,180]).to(self.opts.device)   # (max_loc, 2)
+            q = q.unsqueeze(0).expand(sitr,max_loc,2)    # (sitr, max_loc, 2)
+            c = entity_latlongs[i].unsqueeze(1) * torch.tensor([90,180]).to(self.opts.device)   # (sitr, 1, 2)
+            if self.opts.haversine_distance: # Haversine formula, range about [0, 1.6]
+                q = torch.deg2rad(q)
+                c = torch.deg2rad(c)
+
+                cos_c = torch.cos(c)
+                cos_q = torch.cos(q)
+
+                diff = q-c
+
+                a = torch.sin(diff[:,:,0]/2)**2 + (cos_c[:,:,0] * cos_q[:,:,0]) * torch.sin(diff[:,:,1]/2)**2
+                dis = torch.asin(torch.sqrt(a))
+            else:
+                dis = torch.sum(torch.abs(q-c), -1)    # (sitr, max_loc)
+            masked_dis = dis.masked_fill_(~m, 2)       # (sitr, max_loc)
+            dist[i] = masked_dis
+        min_x = - torch.min(dist, axis=-1).values.unsqueeze(-1)
+        return min_x
+
+
 class NumLocationEncoder(nn.Module):
     def __init__(self, options, is_entity=True):
         super(LocationEncoder, self).__init__()
@@ -119,7 +167,10 @@ class Lamb(nn.Module):
         self.entity_fuse_layer = nn.Linear(self.out_dim, self.out_dim)
 
         self.scale_factor_regular = nn.Sequential(nn.Linear(1, 1, bias=False), nn.Tanh())
+        self.dist_scale_factor_regular = nn.Sequential(nn.Tanh())
 
+        if self.opts.distance:
+            self.distance_encoder = DistanceEncoder(options)
         if self.opts.loc == 'numeric':
             self.q_loc_encoder = LocationcEncoder(self.opts, is_entity=False)
             self.e_loc_encoder = LocationEncoder(self.opts, is_entity=True)
@@ -193,6 +244,14 @@ class Lamb(nn.Module):
         out_c = self.entity_fuse_layer(out_c)   # (B*sitr, out_dim)
         # Compute scores
         scores = self.compute_score(out_q, out_c, training).reshape(B,-1) # (B*sitr)
+
+        # Encode distance (only when not training)
+        if not training and self.opts.distance:
+            dist_scores = self.distance_encoder(question_latlongs, question_latlong_mask, entity_latlongs, training)
+            # dist_scores = dist_scores.reshape(B, -1)
+            dist_scores = self.dist_scale_factor_regular(dist_scores).reshape(B, -1)
+            assert scores.size() == dist_scores.size()
+            scores = (1-self.opts.dist_weight) * scores + self.opts.dist_weight * dist_scores
 
         return scores
 
