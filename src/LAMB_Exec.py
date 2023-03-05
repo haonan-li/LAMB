@@ -244,6 +244,7 @@ def main():
     parser.add_argument("--loc", type=str, default="none", choices=['none','text','numeric'])
     parser.add_argument("--max_loc_length", type=int, default=64)
     parser.add_argument("--loc_out_dim", type=int, default=64)
+    parser.add_argument("--n_loc_layers", type=int, default=4)
     parser.add_argument("--max_locs", type=int, default=5)
     # test
     parser.add_argument("--test_mode", action="store_true")
@@ -271,7 +272,7 @@ def main():
     os.makedirs(opts.output_dir, exist_ok=True)
     import base64
     opts.prefix = \
-    f'LOG_{opts.samples_per_qa}_{opts.hard_negatives_per_qa}_{opts.batch_size*opts.gradient_accumulation_steps}_{opts.lr}_{opts.num_train_epochs}_{opts.s2_after}_{opts.score_method}_{opts.loss}_{opts.encode_entity_name}_{opts.loc}_{opts.max_locs}_{opts.seed}_{opts.n_cluster_reviews}_{opts.train_file}_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_{opts.knowledge_file}_'
+    f'LOG_{opts.samples_per_qa}_{opts.hard_negatives_per_qa}_{opts.batch_size*opts.gradient_accumulation_steps}_{opts.lr}_{opts.num_train_epochs}_{opts.s2_after}_{opts.score_method}_{opts.loss}_{opts.encode_entity_name}_{opts.loc}_{opts.max_locs}_{opts.seed}_{opts.n_cluster_reviews}_{opts.train_file}_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_{opts.l_encoder.split("/")[-1]}_{opts.knowledge_file}_'
     opts.id_file = opts.prefix + opts.id_file
     opts.emb_file = opts.prefix + opts.emb_file
 

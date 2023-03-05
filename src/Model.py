@@ -56,6 +56,7 @@ class TextLocationEncoder(nn.Module):
         self.l_config = AutoConfig.from_pretrained(self.opts.l_encoder)
         self.l_hidden_dim = self.l_config.hidden_size
         self.loc_encoder = AutoModel.from_pretrained(self.opts.l_encoder, from_tf=False, config=self.l_config)
+        self.loc_encoder.transformer.layer = self.loc_encoder.transformer.layer[:self.opts.n_loc_layers] # only keep first N layers
         self.loc_out_layer = nn.Linear(self.l_hidden_dim, self.opts.loc_out_dim)
         self.dropout = nn.Dropout(0.2)
         self.relu = nn.ReLU()
@@ -86,21 +87,13 @@ class Lamb(nn.Module):
             self.out_dim = self.encoder_out_dim
 
         # q_encoder init
-        if self.opts.q_encoder == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
-            self.q_config = AutoConfig.from_pretrained('distilbert-base-uncased')
-            self.q_hidden_dim = self.q_config.compression_dim
-        else:
-            self.q_config = AutoConfig.from_pretrained(self.opts.q_encoder)
-            self.q_hidden_dim = self.q_config.hidden_size
+        self.q_config = AutoConfig.from_pretrained(self.opts.q_encoder)
+        self.q_hidden_dim = self.q_config.hidden_size
 
 
         # e_encoder init
-        if self.opts.e_encoder == 'sebastian-hofstaetter/colbert-distilbert-margin_mse-T2-msmarco':
-            self.e_config = AutoConfig.from_pretrained('distilbert-base-uncased')
-            self.e_hidden_dim = self.e_config.compression_dim
-        else:
-            self.e_config = AutoConfig.from_pretrained(self.opts.e_encoder)
-            self.e_hidden_dim = self.e_config.hidden_size
+        self.e_config = AutoConfig.from_pretrained(self.opts.e_encoder)
+        self.e_hidden_dim = self.e_config.hidden_size
 
         # DEBUG: textual encoder
         if self.opts.debug: # create a simple model for debugging

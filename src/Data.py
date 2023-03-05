@@ -34,6 +34,7 @@ class Lamb_Data:
 
         self.q_tokenizer = AutoTokenizer.from_pretrained(self.opts.q_encoder, use_fast=True)
         self.e_tokenizer = AutoTokenizer.from_pretrained(self.opts.e_encoder, use_fast=True)
+        self.l_tokenizer = AutoTokenizer.from_pretrained(self.opts.l_encoder, use_fast=True)
         self.cached_questions = {}
 
         self.preprocess_all_entities()
@@ -126,7 +127,9 @@ class Lamb_Data:
         samples = []
         print('Expand samples with candidates.')
         random.shuffle(data)
-        for p in tqdm(data):
+        for idx, p in enumerate(data):
+            if idx % 1000 == 0:
+                print(f"Build data amount: {idx}.")
             sample_obj = copy.deepcopy(p)
             answer_ent = p["answer_entity_id"]
             all_answer_entities = p["all_answer_entities"] # Type: set
@@ -240,7 +243,7 @@ class Lamb_Data:
 
         if self.opts.loc == 'text':
             texts = ((examples['name'],))
-            result0 = self.e_tokenizer(*texts, padding='max_length', max_length=self.opts.max_entity_length, truncation=True)
+            result0 = self.l_tokenizer(*texts, padding='max_length', max_length=self.opts.max_entity_length, truncation=True)
             for k,v in result0.items():
                 result['loc_'+k] = v
         return result
