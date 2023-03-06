@@ -5,6 +5,8 @@ import time
 import json
 import random
 import numpy as np
+import logging
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -21,6 +23,29 @@ from transformers import (
     default_data_collator,
     get_scheduler,
 )
+
+class Criterion(nn.Module):
+    def __init__(self, options):
+        super(Criterion, self).__init__()
+        self.opts = options
+
+        if self.opts.loss.lower() == 'mr':
+            self.loss_func = nn.MarginRankingLoss(margin=self.opts.margin, reduction='mean')
+        elif self.opts.loss.lower() == 'nll':
+            self.loss_func = nn.NLLLoss()
+        else:
+            logging.info("Not defined loss function.")
+
+    def forward(self, scores):
+        if self.opts.loss.lower() == 'mr':
+            y = torch.ones(scores[:,1:].size()).to(self.opts.device)
+            loss = self.loss_func(scores[:,:1], scores[:,1:], y)
+        elif self.opts.loss.lower() == 'nll':
+            scores = F.log_softmax(scores, dim=1)
+            target = torch.tensor([0]*scores.size(0)).to(self.opts.device)
+            loss = self.loss_func(scores, target)
+        return loss
+
 
 
 class NumLocationEncoder(nn.Module):

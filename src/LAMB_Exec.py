@@ -57,11 +57,11 @@ def update_counts(counts, b_data, b_scores, opts, data_obj, all_candidates=None)
     return counts
 
 
-def test(opts, data_obj, network, test_data, step=0):
+def test(opts, data_obj, model, test_data, step=0):
 
     all_candidates = data_obj.get_all_candidates()
     data_obj.reload_entity_embeddings(opts.output_dir)
-    network.eval()
+    model.eval()
     batch_size = opts.test_batch_size
     no_batches = math.ceil(len(test_data) / batch_size)
     logging.info(f"Running Test data: {len(test_data)}, with batch_size: {batch_size}, total batches: {no_batches}.")
@@ -71,7 +71,7 @@ def test(opts, data_obj, network, test_data, step=0):
         with torch.no_grad():
             b_data = test_data[batch_size*i : batch_size*(i+1)]
             batch = data_obj.prepare_forward(b_data, training=False, device=opts.device)
-            scores = network(**batch, training=False)
+            scores = model(**batch, training=False)
 
         scores = scores.detach().cpu().numpy()
         counts = update_counts(counts, b_data, scores, opts, data_obj, all_candidates)
@@ -104,9 +104,9 @@ def test(opts, data_obj, network, test_data, step=0):
         with open(os.path.join(opts.output_dir,f'{opts.prefix}_{step}_prediction.json'),'w') as f:
             json.dump(test_data, f)
 
-def rebuild_hard_neg(opts, data_obj, network, training_data):
+def rebuild_hard_neg(opts, data_obj, model, training_data):
     logging.info(f"Rebuild training data with negatives.")
-    network.eval()
+    model.eval()
     batch_size = opts.test_batch_size
     no_batches = math.ceil(len(training_data) / batch_size)
     all_candidates = data_obj.get_all_candidates()
@@ -114,7 +114,7 @@ def rebuild_hard_neg(opts, data_obj, network, training_data):
         with torch.no_grad():
             b_data = training_data[batch_size*i : batch_size*(i+1)]
             batch = data_obj.prepare_forward(b_data, training=False, device=opts.device)
-            scores = network(**batch, training=False)
+            scores = model(**batch, training=False)
 
         b_gold_ids = [x["all_answer_entities"] for x in training_data[batch_size*i : batch_size*(i+1)]]
         b_gold_id = [x["answer_entity_id"] for x in training_data[batch_size*i : batch_size*(i+1)]]
@@ -138,19 +138,14 @@ def rebuild_hard_neg(opts, data_obj, network, training_data):
     return training_data
 
 
-def train(opts, data_obj, network, training_data, test_data):
+def train(opts, data_obj, model, training_data, test_data):
     device = opts.device
     batch_size = opts.batch_size
-    if opts.loss.lower() == 'mr':
-        criterion = nn.MarginRankingLoss(margin=opts.margin, reduction='mean')
-    elif opts.loss.lower() == 'nll':
-        criterion = nn.NLLLoss()
-    else:
-        logging.info("Not defined loss function.")
 
+    criterion = Criterion(opts)
     optimizer_grouped_parameters = [
         {
-            "params": [p for n, p in network.named_parameters()],
+            "params": [p for n, p in model.named_parameters()],
             "weight_decay": 0.0,
         },
         ]
@@ -158,6 +153,13 @@ def train(opts, data_obj, network, training_data, test_data):
     no_batches = math.ceil(len(training_data) / batch_size)
 
     optimizer = optim.AdamW(optimizer_grouped_parameters, lr=opts.lr)
+
+    if opts.precision_mode == 'fp16':
+        from torch.cuda.amp import GradScaler
+        # model, optimizer = amp.initialize(model, optimizer, opt_level='O2')
+        scaler = GradScaler()
+
+
     lr_scheduler = get_scheduler(
         name=opts.lr_scheduler_type,
         optimizer=optimizer,
@@ -172,41 +174,45 @@ def train(opts, data_obj, network, training_data, test_data):
     log_loss = 0
     for epoch in range(opts.num_train_epochs):
         if epoch >= opts.s2_after:
-            training_data = rebuild_hard_neg(opts, data_obj, network, training_data)
+            training_data = rebuild_hard_neg(opts, data_obj, model, training_data)
         expand_training_data = data_obj.expand_with_negatives(training_data, training=True)
         for i in range(no_batches):
-            network.train()
+            model.train()
             batch = expand_training_data[(i * batch_size) : (i+1) * batch_size]
             batch = data_obj.prepare_forward(batch, training=True, device=device)
-            scores = network(**batch, training=True)
 
-            if opts.loss.lower() == 'mr':
-                y = torch.ones(scores[:,1:].size()).to(device)
-                loss = criterion(scores[:,:1], scores[:,1:], y)
-            elif opts.loss.lower() == 'nll':
-                scores = F.log_softmax(scores, dim=1)
-                target = torch.tensor([0]*scores.size(0)).to(device)
-                loss = criterion(scores, target)
+            if opts.precision_mode == 'fp16':
+                with torch.autocast(device_type='cuda', dtype=torch.float16):
+                    scores = model(**batch, training=True)
+                    loss = criterion(scores)
+                    loss = loss / opts.gradient_accumulation_steps
+                scaler.scale(loss).backward()
             else:
-                raise ValueError(f'Loss not configured: {opts.loss.lower()}')
+                scores = model(**batch, training=True)
+                loss = criterion(scores)
+                loss = loss / opts.gradient_accumulation_steps
+                loss.backward()
 
-            loss = loss / opts.gradient_accumulation_steps
-            loss.backward()
             log_loss += loss.item()
+
             if (i+1) % opts.gradient_accumulation_steps == 0:
                 if opts.use_wandb:
                     wandb.log({'train_loss': log_loss,
                                'lr': lr_scheduler.get_last_lr()[-1]})
-                optimizer.step()
+                if opts.precision_mode == 'fp16':
+                    scaler.step(optimizer)
+                    scaler.update()
+                else:
+                    optimizer.step()
                 lr_scheduler.step()
                 optimizer.zero_grad()
                 log_loss = 0
 
         # eval for each batch
         logging.info(f'Save for epoch {epoch}')
-        torch.save(network.state_dict(), os.path.join(opts.output_dir,f'{opts.prefix}.weights'))
-        network.save_entity_embeds(opts, data_obj)
-        test(opts, data_obj, network, test_data, epoch)
+        torch.save(model.state_dict(), os.path.join(opts.output_dir,f'{opts.prefix}.weights'))
+        model.save_entity_embeds(opts, data_obj)
+        test(opts, data_obj, model, test_data, epoch)
 
 
 
@@ -215,6 +221,7 @@ def main():
     parser = argparse.ArgumentParser(description='TourQue Executor')
 
     # training
+    parser.add_argument('--precision_mode', type=str, default="fp16")
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=8)
     parser.add_argument("--seed", type=int, default=42)
@@ -289,9 +296,9 @@ def main():
 
     # Load Data and Model
     data_obj = Lamb_Data(opts=opts)
-    network = Lamb(opts)
+    model = Lamb(opts)
     # wandb.watch(
-    #         network, criterion=None, log="all", log_freq=2000, idx=None,
+    #         model, criterion=None, log="all", log_freq=2000, idx=None,
     #             log_graph=(False)
     #         )
 
@@ -301,16 +308,16 @@ def main():
 
     test_data = data_obj.load_data_from_file(test_file, training=False, debug=opts.debug)
     if opts.test_mode:
-        network.load_state_dict(torch.load(os.path.join(opts.output_dir,f'{opts.prefix}.weights')))
-        network.to(opts.device)
-        test(opts, data_obj, network, test_data)
+        model.load_state_dict(torch.load(os.path.join(opts.output_dir,f'{opts.prefix}.weights')))
+        model.to(opts.device)
+        test(opts, data_obj, model, test_data)
     else:
-        network.to(opts.device)
+        model.to(opts.device)
         training_data = data_obj.load_data_from_file(train_file, training=True, debug=opts.debug)
         # DEBUG
         # training_data = training_data[:100]
         # DEBUG-end
-        train(opts, data_obj, network, training_data, test_data)
+        train(opts, data_obj, model, training_data, test_data)
 
 
 if __name__ == "__main__":
