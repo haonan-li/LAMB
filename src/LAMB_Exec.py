@@ -129,7 +129,7 @@ def rebuild_hard_neg(opts, data_obj, model, training_data):
             std_candidate_idx = {data_obj.entity2id[id] for id in candidates}
             sorted_indexes = np.argsort(scores)[::-1]
             for idx in sorted_indexes:
-                if len(hard_neg) == 10 *opts.hard_negatives_per_qa:
+                if len(hard_neg) == 20 *opts.hard_negatives_per_qa:
                     break
                 if idx not in gold_idx and idx in std_candidate_idx:
                     hard_neg.append(data_obj.id2entity[idx])
