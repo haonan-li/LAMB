@@ -34,7 +34,7 @@ class Lamb_Data:
 
         self.q_tokenizer = AutoTokenizer.from_pretrained(self.opts.q_encoder, use_fast=True)
         self.e_tokenizer = AutoTokenizer.from_pretrained(self.opts.e_encoder, use_fast=True)
-        self.l_tokenizer = AutoTokenizer.from_pretrained(self.opts.l_encoder, use_fast=True)
+        self.l_tokenizer = AutoTokenizer.from_pretrained(self.opts.e_encoder, use_fast=True) # use the same tokenizer as entity reviews
         self.cached_questions = {}
 
         self.preprocess_all_entities()
@@ -95,7 +95,7 @@ class Lamb_Data:
             obj["answer_entity_id"] = entry["answer_entity_id"]
             obj["all_answer_entities"] = set(filter(lambda x: x in self.entity_set, entry["all_answer_entities"]))
             obj["all_answer_entity_list"] = sorted(list(obj["all_answer_entities"]))
-            if self.opts.loc:
+            if self.opts.loc == 'numeric':
                 tagged_latlong = [(x[0],x[1]) for x in entry["tagged_locations_lat_long"]]
                 obj["tagged_latlongs"] = list(set(tagged_latlong)) # unique location
             qa_pairs.append(obj)

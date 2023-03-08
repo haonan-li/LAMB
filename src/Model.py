@@ -50,7 +50,7 @@ class Criterion(nn.Module):
 
 class NumLocationEncoder(nn.Module):
     def __init__(self, options, is_entity=True):
-        super(LocationEncoder, self).__init__()
+        super(NumLocationEncoder, self).__init__()
         self.opts = options
         self.max_loc = self.opts.max_locs
         self.is_entity = is_entity
@@ -139,8 +139,8 @@ class Lamb(nn.Module):
         self.scale_factor_regular = nn.Sequential(nn.Linear(1, 1, bias=False), nn.Tanh())
 
         if self.opts.loc == 'numeric':
-            self.q_loc_encoder = LocationcEncoder(self.opts, is_entity=False)
-            self.e_loc_encoder = LocationEncoder(self.opts, is_entity=True)
+            self.q_loc_encoder = NumLocationEncoder(self.opts, is_entity=False)
+            self.e_loc_encoder = NumLocationEncoder(self.opts, is_entity=True)
         if self.opts.loc == 'text':
             self.q_loc_encoder = nn.Linear(self.q_hidden_dim, self.loc_out_dim)
             self.e_loc_encoder = TextLocationEncoder(self.opts)
