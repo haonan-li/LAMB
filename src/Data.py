@@ -266,6 +266,16 @@ class Lamb_Data:
         )
         self.processed_entities = processed_datasets
 
+        for i in range(2):
+            print("******")
+            print(type(processed_datasets))
+            for k,v in processed_datasets[i].items():
+                if k != 'candidates':
+                    print(f"Entity sample {i}: {k} -- {v}")
+            print("******\n")
+
+
+
 
     def reload_entity_embeddings(self, output_dir):
         with open(os.path.join(output_dir, self.opts.emb_file),'rb') as f:
