@@ -218,7 +218,7 @@ def train(opts, data_obj, model, training_data, test_data):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='TourQue Executor')
+    parser = argparse.ArgumentParser(description='Location-Aware Modular Biencoder')
 
     # training
     parser.add_argument('--precision_mode', type=str, default="fp16")
@@ -284,7 +284,7 @@ def main():
     opts.emb_file = opts.prefix + opts.emb_file
 
     if opts.use_wandb:
-        wandb.init(project="new_tourqa", config=opts)
+        wandb.init(project="lamb", config=opts)
     log_file = os.path.join(opts.output_dir, opts.prefix + ".log")
     logging.basicConfig(level=logging.INFO,
                         format='%(asctime)s - %(message)s',

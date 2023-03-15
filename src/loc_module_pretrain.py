@@ -1,3 +1,5 @@
+import os,sys
+import argparse
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -8,8 +10,22 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 from transformers import AutoModel, AutoConfig, AutoTokenizer, AutoModelForSequenceClassification
 
+
+parser = argparse.ArgumentParser(description='Lamb Loc Module')
+parser.add_argument("--lr", type=float, default=2e-5)
+parser.add_argument("--n_loc_layers", type=int, default=2)
+parser.add_argument("--batch_size", type=int, default=16)
+parser.add_argument("--num_train_epochs", type=int, default=12)
+parser.add_argument("--l_encoder", type=str, default='distilbert-base-uncased')
+parser.add_argument("--knowledge_file", type=str,default="TourQue_Knowledge_Sel.json")
+parser.add_argument('--data_dir', type=str, default="../data/")
+parser.add_argument("--max_loc_length", type=int, default=64)
+args = parser.parse_args(sys.argv[1:])
+
+
+
 # Data
-with open('/l/users/haonan.li/LAMB/data/TourQue_Knowledge_Sel.json') as f:
+with open(os.path.join(args.data_dir, args.knowledge_file)) as f:
     data = pd.read_json(f, orient='index')
 data = data.dropna() # remove the lines without latlong
 
@@ -28,33 +44,28 @@ class PlacesDataset(torch.utils.data.Dataset):
         return len(self.latlong)
 
 # Model
-n_layers = 2
-model = AutoModel.from_pretrained('distilbert-base-uncased')
-model.transformer.layer = model.transformer.layer[:n_layers] # keep only n_layers
-tokenizer = AutoTokenizer.from_pretrained('distilbert-base-uncased')
+model = AutoModel.from_pretrained(args.l_encoder)
+model.transformer.layer = model.transformer.layer[:args.n_loc_layers] # keep only n_layers
+tokenizer = AutoTokenizer.from_pretrained(args.l_encoder)
 
 train_data, test_data = train_test_split(data, test_size=0.1, random_state=42)
 
-train_encodings = tokenizer(train_data['name'].tolist(), padding=True, truncation=True, max_length=64)
-test_encodings = tokenizer(test_data['name'].tolist(), padding=True, truncation=True, max_length=64)
+train_encodings = tokenizer(train_data['name'].tolist(), padding=True, truncation=True, max_length=args.max_loc_length)
+test_encodings = tokenizer(test_data['name'].tolist(), padding=True, truncation=True, max_length=args.max_loc_length)
 
 # Create the PyTorch datasets and data loaders
 train_dataset = PlacesDataset(train_encodings, train_data['lat_long'].tolist())
 test_dataset = PlacesDataset(test_encodings, test_data['lat_long'].tolist())
 
-train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=16, shuffle=True)
-test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=16, shuffle=False)
+train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
+test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False)
 
 # Train
 # Define hyperparameters
-batch_size = 8
-learning_rate = 2e-5
-num_epochs = 3
-max_seq_len = 64
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Define the optimizer and the learning rate scheduler
-optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
 scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.99)
 criterion = torch.nn.MSELoss()
 
@@ -146,7 +157,6 @@ def train(model, train_loader, optimizer, criterion, device):
         loss = criterion(rep, latlong.float(), device)
         loss.backward()
         optimizer.step()
-        wandb.log({"Train Loss":loss.item()})
         total_loss += loss.item()
     return total_loss / len(train_loader)
 
@@ -169,9 +179,8 @@ def evaluate(model, test_loader, criterion, device):
 # Train the model
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 model.to(device)
-epochs = 1
-for epoch in range(epochs):
+for epoch in range(args.num_train_epochs):
     train_loss = train(model, train_loader, optimizer, criterion, device)
     test_loss = evaluate(model, test_loader, criterion, device)
-    wandb.log({"Avg Train Loss":train_loss, "Test Loss": test_loss})
-    model.save_pretrained(f'/l/users/haonan.li/LAMB/data/tmp/loc_{n_layers}layer.pth')
+    # Save to data_dir
+    model.save_pretrained(os.path.join(args.data_dir, 'loc_module', f'loc_{args.n_layers}layer.pth'))
