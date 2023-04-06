@@ -164,7 +164,7 @@ def train(opts, data_obj, model, training_data, test_data):
         name=opts.lr_scheduler_type,
         optimizer=optimizer,
         num_warmup_steps=opts.num_warmup_steps,
-        num_training_steps=opts.num_train_epochs * int(no_batches / opts.gradient_accumulation_steps),
+        num_training_steps= (opts.s1_train_epochs + opts.s2_train_epochs) * int(no_batches / opts.gradient_accumulation_steps),
     )
 
     logging.info("***** Running training *****")
@@ -172,8 +172,8 @@ def train(opts, data_obj, model, training_data, test_data):
     logging.info(f"  Instantaneous batch size per device = {batch_size}")
     logging.info(f"  Gradient Accumulation steps = {opts.gradient_accumulation_steps}")
     log_loss = 0
-    for epoch in range(opts.num_train_epochs):
-        if epoch >= opts.s2_after:
+    for epoch in range(opts.s1_train_epochs+opts.s2_train_epochs):
+        if epoch >= opts.s1_train_epochs:
             training_data = rebuild_hard_neg(opts, data_obj, model, training_data)
         expand_training_data = data_obj.expand_with_negatives(training_data, training=True)
         for i in range(no_batches):
@@ -223,7 +223,7 @@ def main():
     # training
     parser.add_argument('--precision_mode', type=str, default="", choices=["fp16",""])
     parser.add_argument("--batch_size", type=int, default=4)
-    parser.add_argument("--gradient_accumulation_steps", type=int, default=8)
+    parser.add_argument("--gradient_accumulation_steps", type=int, default=1)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument('--loss', type=str, default="nll")
     parser.add_argument("--margin", type=float, default=1.0) # if use margin ranking loss
@@ -232,8 +232,8 @@ def main():
             choices=["linear", "cosine", "cosine_with_restarts", "polynomial", "constant", "constant_with_warmup"])
     parser.add_argument("--num_warmup_steps", type=float, default=0)
     parser.add_argument("--dropout", type=float, default=0.2)
-    parser.add_argument("--num_train_epochs", type=int, default=10)
-    parser.add_argument("--s2_after", type=int, default=5)
+    parser.add_argument("--s1_train_epochs", type=int, default=5)
+    parser.add_argument("--s2_train_epochs", type=int, default=5)
     # contrastive
     parser.add_argument("--samples_per_qa", type=int, default=8)
     parser.add_argument("--hard_negatives_per_qa", type=int, default=5)
@@ -248,10 +248,10 @@ def main():
     parser.add_argument("--encode_entity_name", action="store_true")
     parser.add_argument("--encoder_out_dim", type=int, default=256)
     # location module
-    parser.add_argument("--loc", type=str, default="none", choices=['none','text','numeric'])
+    parser.add_argument("--location_module", type=str, default="none", choices=['none','text','numeric'])
     parser.add_argument("--max_loc_length", type=int, default=64)
     parser.add_argument("--loc_out_dim", type=int, default=64)
-    parser.add_argument("--n_loc_layers", type=int, default=4)
+    parser.add_argument("--n_loc_layers", type=int, default=2)
     parser.add_argument("--max_locs", type=int, default=5)
     # test
     parser.add_argument("--test_mode", action="store_true")
@@ -279,7 +279,7 @@ def main():
     os.makedirs(opts.output_dir, exist_ok=True)
     import base64
     opts.prefix = \
-    f'LOG_{opts.samples_per_qa}_{opts.hard_negatives_per_qa}_{opts.batch_size*opts.gradient_accumulation_steps}_{opts.lr}_{opts.num_train_epochs}_{opts.s2_after}_{opts.score_method}_{opts.loss}_{opts.encode_entity_name}_{opts.loc}_{opts.max_locs}_{opts.seed}_{opts.n_cluster_reviews}_{opts.train_file}_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_{opts.l_encoder.split("/")[-1]}_{opts.knowledge_file}_'
+    f'LOG_{opts.samples_per_qa}_{opts.hard_negatives_per_qa}_{opts.batch_size*opts.gradient_accumulation_steps}_{opts.lr}_{opts.s1_train_epochs}_{opts.s2_train_epochs}_{opts.score_method}_{opts.loss}_{opts.encode_entity_name}_{opts.loc}_{opts.max_locs}_{opts.seed}_{opts.n_cluster_reviews}_{opts.train_file}_{opts.test_file}_{opts.q_encoder.split("/")[-1]}_{opts.e_encoder.split("/")[-1]}_{opts.l_encoder.split("/")[-1]}_{opts.knowledge_file}_'
     opts.id_file = opts.prefix + opts.id_file
     opts.emb_file = opts.prefix + opts.emb_file
 

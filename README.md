@@ -14,7 +14,7 @@ LAMB: Location-Aware Modular Bi-encoder for Tourism Question Answering
 ### Download the data
 
 You can download the model parameters and dataset from [Fake link]().
-Note: This repo is currently anonymoused, we will release link on acceptance.
+Note: This repo is currently anonymouse, we will release link on acceptance.
 
 ### Training
 
@@ -29,16 +29,12 @@ python LAMB_Exec.py
     --e_encoder distilbert-base-uncased \
     --l_encoder ../data/loc_module/loc_2layer.pth \
     --data_dir ../data \
-    --location text \
-    --lr 2e-5 \
-    --batch_size 2 \
-    --gradient_accumulation_steps 4 \
+    --location_module text \
+    --batch_size 4 \
+    --gradient_accumulation_steps 2 \
     --samples_per_qa 8 \
     --hard_negatives_per_qa 5 \
-    --train_file train.json \
-    --test_file test.json \
-    --num_train_epochs 10 \
-    --s2_after 5 \
+    --s1_train_epochs 5 \
+    --s2_train_epochs 5 \
     --output_dir ../output \
-    --fp16
 ```
