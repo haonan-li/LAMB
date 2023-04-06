@@ -95,7 +95,7 @@ class Lamb_Data:
             obj["answer_entity_id"] = entry["answer_entity_id"]
             obj["all_answer_entities"] = set(filter(lambda x: x in self.entity_set, entry["all_answer_entities"]))
             obj["all_answer_entity_list"] = sorted(list(obj["all_answer_entities"]))
-            if self.opts.loc == 'numeric':
+            if self.opts.location_module == 'numeric':
                 tagged_latlong = [(x[0],x[1]) for x in entry["tagged_locations_lat_long"]]
                 obj["tagged_latlongs"] = list(set(tagged_latlong)) # unique location
             qa_pairs.append(obj)
@@ -187,7 +187,7 @@ class Lamb_Data:
             else:
                 texts = ((example['question'],))
                 result = self.q_tokenizer(*texts, padding="max_length", max_length=self.opts.max_question_length, truncation=True)
-                if self.opts.loc == 'numeric':
+                if self.opts.location_module == 'numeric':
                     result['latlongs'], result['latlong_mask'] = self.pad_locs(example['tagged_latlongs'])
                 self.cached_questions[example['question']] = result
             features.append(result)
@@ -207,7 +207,7 @@ class Lamb_Data:
 
         if not training:
             entity_inputs['embeds'] = torch.tensor(np.array(self.entity_embeddings))
-            if self.opts.loc == 'numeric':
+            if self.opts.location_module == 'numeric':
                 entity_inputs['latlongs'] = torch.tensor(np.array(self.processed_entities['latlongs']))
             return entity_inputs,{}
 
@@ -221,7 +221,7 @@ class Lamb_Data:
                 entity_ids = data["candidates"] + entity_ids # put gold to the end to avoid top rank is gold if same score
         entity_indexes = [self.entity2id[e] for e in entity_ids]
 
-        if self.opts.loc == 'numeric':
+        if self.opts.location_module == 'numeric':
             entity_inputs['latlongs'] = torch.tensor(np.array([self.get_coordinate(i) for i in entity_ids]))
 
         features = [self.processed_entities[idx] for idx in entity_indexes]
@@ -241,7 +241,7 @@ class Lamb_Data:
             texts = ((examples['review'],))
         result = self.e_tokenizer(*texts, padding='max_length', max_length=self.opts.max_entity_length, truncation=True)
 
-        if self.opts.loc == 'text':
+        if self.opts.location_module == 'text':
             texts = ((examples['name'],))
             result0 = self.l_tokenizer(*texts, padding='max_length', max_length=self.opts.max_entity_length, truncation=True)
             for k,v in result0.items():
@@ -255,7 +255,7 @@ class Lamb_Data:
         df['id'] = self.entity_ids
         df['review'] = [' '.join(self.entity_knowledge[k]['review']) for k in df['id']]
         df['name'] = [self.entity_knowledge[k]['name'] for k in df['id']]
-        if self.opts.loc == 'numeric':
+        if self.opts.location_module == 'numeric':
             df['latlongs'] = [self.get_coordinate(k) for k in df['id']]
         entity_dataset = Dataset.from_dict(df) # create datasets class for quick process
 
@@ -292,13 +292,13 @@ class Lamb_Data:
         entity_inputs = {k:v.to(device) for k,v in entity_inputs.items()}
         entity_loc_inputs = {k:v.to(device) for k,v in entity_loc_inputs.items()}
 
-        need_latlong = self.opts.loc == 'numeric'
+        need_latlong = self.opts.location_module == 'numeric'
         # seperate inputs
         q_latlongs = question_inputs['latlongs'] if need_latlong else None
         q_latlong_mask = question_inputs['latlong_mask'] if need_latlong else None
         e_latlongs = entity_inputs['latlongs'] if need_latlong else None
         e_emb = entity_inputs['embeds'] if not training else None
-        entity_loc_inputs = entity_loc_inputs if (training and self.opts.loc=='text') else None
+        entity_loc_inputs = entity_loc_inputs if (training and self.opts.location_module=='text') else None
         question_inputs.pop('latlongs',None)
         question_inputs.pop('latlong_mask',None)
         entity_inputs.pop('latlongs',None)

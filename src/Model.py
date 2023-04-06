@@ -104,9 +104,9 @@ class Lamb(nn.Module):
         self.loc_out_dim= self.opts.loc_out_dim
         self.relu = nn.ReLU()
 
-        if self.opts.loc == 'numeric':
+        if self.opts.location_module == 'numeric':
             self.out_dim = self.encoder_out_dim + 2*self.max_loc
-        elif self.opts.loc == 'text':
+        elif self.opts.location_module == 'text':
             self.out_dim = self.encoder_out_dim + self.loc_out_dim
         else:
             self.out_dim = self.encoder_out_dim
@@ -138,10 +138,10 @@ class Lamb(nn.Module):
 
         self.scale_factor_regular = nn.Sequential(nn.Linear(1, 1, bias=False), nn.Tanh())
 
-        if self.opts.loc == 'numeric':
+        if self.opts.location_module == 'numeric':
             self.q_loc_encoder = NumLocationEncoder(self.opts, is_entity=False)
             self.e_loc_encoder = NumLocationEncoder(self.opts, is_entity=True)
-        if self.opts.loc == 'text':
+        if self.opts.location_module == 'text':
             self.q_loc_encoder = nn.Linear(self.q_hidden_dim, self.loc_out_dim)
             self.e_loc_encoder = TextLocationEncoder(self.opts)
 
@@ -188,7 +188,7 @@ class Lamb(nn.Module):
             out_c = entity_vectors
 
         # Location encoding
-        if self.opts.loc == 'numeric':
+        if self.opts.location_module == 'numeric':
             out_loc_q = self.q_loc_encoder(question_latlongs, question_latlong_mask)
             dim_loc_q = out_loc_q.size(-1)
             if training:
@@ -197,7 +197,7 @@ class Lamb(nn.Module):
             if training:
                 out_loc_c = self.e_loc_encoder(entity_latlongs)
                 out_c = torch.cat((out_c, out_loc_c), dim=-1)
-        if self.opts.loc == 'text':
+        if self.opts.location_module == 'text':
             out_loc_q = self.q_loc_encoder(self.relu(self.dropout(pooled_out_q)))
             if training:
                 out_loc_q = out_loc_q.unsqueeze(1).expand(B,sitr,self.loc_out_dim).reshape(B*sitr, self.loc_out_dim)
@@ -228,10 +228,10 @@ class Lamb(nn.Module):
                 hidden_state_c = self.entity_encoder(**t_batch)[0]
                 out_c = hidden_state_c[:, 0]
                 out_c = self.entity_out_layer(out_c) # add out layer here, no need to do it when in eval forward.
-                if self.opts.loc == 'numeric':
+                if self.opts.location_module == 'numeric':
                     out_loc_c = self.e_loc_encoder(**l_num_batch)
                     out_c = torch.cat((out_c, out_loc_c), dim=-1)
-                elif self.opts.loc == 'text':
+                elif self.opts.location_module == 'text':
                     out_loc_c = self.e_loc_encoder(l_text_batch)
                     out_c = torch.cat((out_c, out_loc_c), dim=-1)
                 all_entity_emb.append(out_c.detach().cpu().numpy())
