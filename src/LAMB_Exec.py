@@ -221,7 +221,7 @@ def main():
     parser = argparse.ArgumentParser(description='Location-Aware Modular Biencoder')
 
     # training
-    parser.add_argument('--precision_mode', type=str, default="fp16")
+    parser.add_argument('--precision_mode', type=str, default="", choices=["fp16",""])
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=8)
     parser.add_argument("--seed", type=int, default=42)
@@ -232,11 +232,11 @@ def main():
             choices=["linear", "cosine", "cosine_with_restarts", "polynomial", "constant", "constant_with_warmup"])
     parser.add_argument("--num_warmup_steps", type=float, default=0)
     parser.add_argument("--dropout", type=float, default=0.2)
-    parser.add_argument("--num_train_epochs", type=int, default=12)
-    parser.add_argument("--s2_after", type=int, default=8)
+    parser.add_argument("--num_train_epochs", type=int, default=10)
+    parser.add_argument("--s2_after", type=int, default=5)
     # contrastive
-    parser.add_argument("--samples_per_qa", type=int, default=9)
-    parser.add_argument("--hard_negatives_per_qa", type=int, default=8)
+    parser.add_argument("--samples_per_qa", type=int, default=8)
+    parser.add_argument("--hard_negatives_per_qa", type=int, default=5)
     parser.add_argument("--score_method", type=str, default="dot", choices=['dot','cosine'])
     # textual module
     parser.add_argument("--q_encoder", type=str, default='distilbert-base-uncased')
@@ -267,7 +267,7 @@ def main():
     parser.add_argument('--valid_file', type=str, default="valid.json")
     parser.add_argument("--id_file", type=str,default="entity_id.json")
     parser.add_argument("--emb_file", type=str,default="entity_emb.np")
-    parser.add_argument("--knowledge_file", type=str,default="TourQue_Knowledge_Cluster.json")
+    parser.add_argument("--knowledge_file", type=str,default="TourQue_Knowledge_Selsum.json")
     parser.add_argument("--cities_lat_long_file", type=str, default="final_cities_lat_long.json")
 
     opts = parser.parse_args(sys.argv[1:])

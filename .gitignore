@@ -1,5 +1,6 @@
 output/*
 data/*
+!data/human_eval/
 src/__pycache__/*
 src/.ipynb_checkpoints/*
 *.DS_Store
