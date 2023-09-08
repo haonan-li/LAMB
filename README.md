@@ -1,5 +1,7 @@
-# LAMB
-LAMB: Location-Aware Modular Bi-encoder for Tourism Question Answering
+# LAMB: Location-Aware Modular Bi-encoder for Tourism Question Answering
+
+This repo provides the source code & data of our paper: [Location-Aware Modular Bi-encoder for Tourism Question Answering]() (AACL 2023).
+
 
 ## Dependencies
 
@@ -13,8 +15,8 @@ LAMB: Location-Aware Modular Bi-encoder for Tourism Question Answering
 
 ### Download the data
 
-You can download the model parameters and dataset from [Fake link]().
-Note: This repo is currently anonymouse, we will release link on acceptance.
+You can download the model parameters and dataset from [here](https://huggingface.co/haonan-li/lamb-data/tree/main).
+Replace the entire data folder with the downloaded folder.
 
 ### Training
 
